@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.46",
     "axios": "^0.17.1",
     "breakpoint-sass": "^2.7.1",
     "history": "^4.7.2",

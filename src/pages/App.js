@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // Pages
-import { PageOne, PageTwo } from './';
+import { Home, PageOne, PageTwo } from './';
 
 class App extends Component {
   constructor(props) {
@@ -14,6 +14,7 @@ class App extends Component {
   render() {
     return (
       <Switch>
+        <Route exact path="/" component={Home} />
         <Route exact path="/pageone" component={PageOne} />
         <Route exact path="/pagetwo" component={PageTwo} />
       </Switch>
