@@ -17,12 +17,16 @@
 @import "core/screen-layout";
 @import "core/typography";
 
-// Components
+// Own Components
 @import "components/header";
 @import "components/footer";
 @import "components/buttons";
 @import "components/lists";
 @import "components/tabs";
+
+// React Components
+@import "../../components/content/view/contentStyles";
+
 
 // Templates
 @import "templates/example";

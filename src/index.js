@@ -8,7 +8,7 @@ import './assets/styles/styles.css';
 
 import configureStore from './config/store';
 
-import App from './pages/App';
+import App from './pages/application/applicationView';
 
 const history = createHistory();
 const store = configureStore(undefined, history);
