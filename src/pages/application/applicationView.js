@@ -20,14 +20,14 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={Theme}>
-        <Switch>
-          <Menu />
-          <Content>
+        <Menu />
+        <Content>
+          <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/pageone" component={PageOne} />
             <Route exact path="/pagetwo" component={PageTwo} />
-          </Content>
-        </Switch>
+          </Switch>
+        </Content>
       </MuiThemeProvider>
     );
   }

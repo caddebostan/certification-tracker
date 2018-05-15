@@ -86,24 +86,6 @@ body {
 img, svg {
   max-width: 100%; }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  flex-wrap: wrap; }
-  .container > * {
-    width: 100vw; }
-  .container .header,
-  .container .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-
-.content {
-  flex-grow: 1; }
-
 .header {
   background: linear-gradient(to right, #bc1ec9, #9b1abb, #8e19b6);
   height: 90px;
@@ -155,6 +137,19 @@ img, svg {
 
 .tab-button-icon {
   font-size: 3em; }
+
+.content {
+  flex-grow: 1;
+  background-color: #fff;
+  padding: 3em; }
+
+.root {
+  flex-grow: 1;
+  z-index: 1;
+  overflow: 'hidden';
+  position: 'relative';
+  display: 'flex';
+  width: '100%'; }
 
 @media (min-width: 20rem) {
   #example {
