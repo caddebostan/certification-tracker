@@ -20,7 +20,6 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={Theme}>
-        <Menu />
         <Content>
           <Switch>
             <Route exact path="/" component={Home} />
