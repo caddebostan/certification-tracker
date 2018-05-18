@@ -59,6 +59,15 @@ export const MenuListItems = (
         <ListItemText primary="Onay" />
       </ListItem>
     </Link>
+
+    <Link to="/example">
+      <ListItem button>
+        <ListItemIcon>
+          <Settings />
+        </ListItemIcon>
+        <ListItemText primary="Example" />
+      </ListItem>
+    </Link>
   </div>
 );
 
