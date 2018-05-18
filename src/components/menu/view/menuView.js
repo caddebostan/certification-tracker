@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -51,10 +51,14 @@ const styles = theme => ({
   },
 });
 
-class ResponsiveDrawer extends React.Component {
-  state = {
-    mobileOpen: false,
-  };
+class ResponsiveDrawer extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      mobileOpen: false,
+    };
+  }
 
   handleDrawerToggle = () => {
     this.setState({ mobileOpen: !this.state.mobileOpen });

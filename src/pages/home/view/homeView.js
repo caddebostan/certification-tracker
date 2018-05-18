@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-//import { ExampleView } from '../../../components/example';
+// import { ExampleView } from '../../../components/example';
 
 export class HomeView extends Component {
   constructor(props) {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Button, Typography } from 'material-ui';
+import PropTypes from 'prop-types';
+
 import { Menu } from '../../menu';
 
 export class ContentView extends Component {
@@ -10,12 +11,17 @@ export class ContentView extends Component {
   }
 
   render() {
+    const { children } = this.props;
     return (
       <Menu>
-        <main className="content">{this.props.children}</main>
+        <main className="content">{children}</main>
       </Menu>
     );
   }
 }
+
+ContentView.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default ContentView;

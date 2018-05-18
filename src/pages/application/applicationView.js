@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-// Pages
-import { Home, PageOne, PageTwo } from '../';
-import { Content } from '../../components/content';
-import { Menu } from '../../components/menu';
-
 // Material ui components
 import { MuiThemeProvider } from 'material-ui/styles';
 import { Theme } from './materialTheme';
+
+// Pages
+import { Home, PageOne, PageTwo } from '../';
+import { Content } from '../../components/content';
 
 class App extends Component {
   constructor(props) {
