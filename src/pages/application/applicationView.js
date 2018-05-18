@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 // Pages
-import { Home, PageOne, PageTwo } from '../';
+import { Home, PageOne, PageTwo, Example } from '../';
 import { Content } from '../../components/content';
 import { Menu } from '../../components/menu';
 
@@ -25,6 +25,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/pageone" component={PageOne} />
             <Route exact path="/pagetwo" component={PageTwo} />
+            <Route exact path="/example" component={Example} />
           </Switch>
         </Content>
       </MuiThemeProvider>
