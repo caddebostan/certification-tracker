@@ -6,7 +6,7 @@ import { MuiThemeProvider } from 'material-ui/styles';
 import { Theme } from './materialTheme';
 
 // Pages
-import { Home, PageOne, PageTwo } from '../';
+import { Home, PageOne, PageTwo, Example } from '../';
 import { Content } from '../../components/content';
 
 class App extends Component {
@@ -24,6 +24,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/pageone" component={PageOne} />
             <Route exact path="/pagetwo" component={PageTwo} />
+            <Route exact path="/example" component={Example} />
           </Switch>
         </Content>
       </MuiThemeProvider>
