@@ -1,0 +1,24 @@
+language: node_js
+
+node_js:
+  - "7"
+
+sudo: false
+
+cache: yarn
+
+script:
+  - yarn run test:ci
+
+after_success:
+  - codecov
+
+# before_deploy:
+#   - yarn run build
+#   - cp ./build/index.html ./build/200.html
+
+# deploy:
+#   provider: surge
+#   project: ./build/
+#   domain: tepsi.co
+#   skip_cleanup: true

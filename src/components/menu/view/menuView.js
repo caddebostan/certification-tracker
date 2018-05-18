@@ -65,7 +65,7 @@ class ResponsiveDrawer extends Component {
   };
 
   render() {
-    const { classes, theme } = this.props;
+    const { classes, theme, children } = this.props;
 
     const drawer = (
       <div>
@@ -121,15 +121,16 @@ class ResponsiveDrawer extends Component {
             {drawer}
           </Drawer>
         </Hidden>
-        {this.props.children}
+        {children}
       </div>
     );
   }
 }
 
 ResponsiveDrawer.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
+  children: PropTypes.node.isRequired,
+  classes: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  theme: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
 };
 
 export default withStyles(styles, { withTheme: true })(ResponsiveDrawer);
