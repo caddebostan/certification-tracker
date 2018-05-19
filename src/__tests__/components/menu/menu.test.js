@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { Menu } from '../../../components/menu';
+import CustomButtons from '../../../components';
 
 it('renders correctly', () => {
-  const wrapper = shallow(<Menu />);
+  const wrapper = shallow(<CustomButtons />);
 
   expect(wrapper).toMatchSnapshot();
 });

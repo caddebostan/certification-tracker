@@ -81,34 +81,23 @@ import Small from './typography/small';
 import A from './typography/a';
 
 export {
-  // Cards
   ChartCard,
   ProfileCard,
   RegularCard,
   StatsCard,
   TasksCard,
-  // CustomButtons
   Button,
   IconButton,
-  // CustomInput
   CustomInput,
-  // Footer
   Footer,
-  // Grid
   ItemGrid,
-  // Header
   Header,
   HeaderLinks,
-  // Sidebar
   Sidebar,
-  //Snackbar
   Snackbar,
   SnackbarContent,
-  // Table
   Table,
-  // Tasks
   Tasks,
-  // Typography
   P,
   Quote,
   Muted,

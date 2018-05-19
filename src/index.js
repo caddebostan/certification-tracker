@@ -7,13 +7,13 @@ import './assets/css/material-dashboard-react.css';
 
 import indexRoutes from './routes/index';
 
-const hist = createBrowserHistory();
+const history = createBrowserHistory();
 
 ReactDOM.render(
-  <Router history={hist}>
+  <Router history={history}>
     <Switch>
-      {indexRoutes.map((prop, key) => {
-        return <Route path={prop.path} component={prop.component} key={key} />;
+      {indexRoutes.map(prop => {
+        return <Route path={prop.path} component={prop.component} />;
       })}
     </Switch>
   </Router>,

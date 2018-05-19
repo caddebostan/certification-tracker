@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { Content } from '../../../components/content';
+import { CustomInput } from '../../../components';
 
 it('renders correctly', () => {
-  const wrapper = shallow(<Content />);
+  const wrapper = shallow(<CustomInput />);
 
   expect(wrapper).toMatchSnapshot();
 });
