@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -51,17 +51,21 @@ const styles = theme => ({
   },
 });
 
-class ResponsiveDrawer extends React.Component {
-  state = {
-    mobileOpen: false,
-  };
+class ResponsiveDrawer extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      mobileOpen: false,
+    };
+  }
 
   handleDrawerToggle = () => {
     this.setState({ mobileOpen: !this.state.mobileOpen });
   };
 
   render() {
-    const { classes, theme } = this.props;
+    const { classes, theme, children } = this.props;
 
     const drawer = (
       <div>
@@ -117,15 +121,16 @@ class ResponsiveDrawer extends React.Component {
             {drawer}
           </Drawer>
         </Hidden>
-        {this.props.children}
+        {children}
       </div>
     );
   }
 }
 
 ResponsiveDrawer.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
+  children: PropTypes.node.isRequired,
+  classes: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+  theme: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
 };
 
 export default withStyles(styles, { withTheme: true })(ResponsiveDrawer);
