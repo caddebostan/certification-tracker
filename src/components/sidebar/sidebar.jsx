@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { NavLink } from "react-router-dom";
-import cx from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
+import cx from 'classnames';
 import {
   withStyles,
   Drawer,
@@ -9,36 +9,31 @@ import {
   List,
   ListItem,
   ListItemIcon,
-  ListItemText
-} from "material-ui";
+  ListItemText,
+} from 'material-ui';
 
-import { HeaderLinks } from "../";
+import { HeaderLinks } from '../';
 
-import sidebarStyle from "../../assets/jss/material-dashboard-react/sidebarStyle";
+import sidebarStyle from '../../assets/jss/material-dashboard-react/sidebarStyle';
 
 const Sidebar = ({ ...props }) => {
   // verifies if routeName is the one active (in browser input)
   function activeRoute(routeName) {
-    return props.location.pathname.indexOf(routeName) > -1 ? true : false;
+    return props.location.pathname.indexOf(routeName) > -1;
   }
   const { classes, color, logo, image, logoText, routes } = props;
-  var links = (
+  const links = (
     <List className={classes.list}>
       {routes.map((prop, key) => {
         if (prop.redirect) return null;
         const listItemClasses = cx({
-          [" " + classes[color]]: activeRoute(prop.path)
+          [` ${classes[color]}`]: activeRoute(prop.path),
         });
         const whiteFontClasses = cx({
-          [" " + classes.whiteFont]: activeRoute(prop.path)
+          [` ${classes.whiteFont}`]: activeRoute(prop.path),
         });
         return (
-          <NavLink
-            to={prop.path}
-            className={classes.item}
-            activeClassName="active"
-            key={key}
-          >
+          <NavLink to={prop.path} className={classes.item} activeClassName="active" key={key}>
             <ListItem button className={classes.itemLink + listItemClasses}>
               <ListItemIcon className={classes.itemIcon + whiteFontClasses}>
                 <prop.icon />
@@ -46,7 +41,7 @@ const Sidebar = ({ ...props }) => {
               <ListItemText
                 primary={prop.sidebarName}
                 className={classes.itemText + whiteFontClasses}
-                disableTypography={true}
+                disableTypography
               />
             </ListItem>
           </NavLink>
@@ -54,7 +49,7 @@ const Sidebar = ({ ...props }) => {
       })}
     </List>
   );
-  var brand = (
+  const brand = (
     <div className={classes.logo}>
       <a href="#" className={classes.logoLink}>
         <div className={classes.logoImage}>
@@ -72,11 +67,11 @@ const Sidebar = ({ ...props }) => {
           anchor="right"
           open={props.open}
           classes={{
-            paper: classes.drawerPaper
+            paper: classes.drawerPaper,
           }}
           onClose={props.handleDrawerToggle}
           ModalProps={{
-            keepMounted: true // Better open performance on mobile.
+            keepMounted: true, // Better open performance on mobile.
           }}
         >
           {brand}
@@ -85,10 +80,7 @@ const Sidebar = ({ ...props }) => {
             {links}
           </div>
           {image !== undefined ? (
-            <div
-              className={classes.background}
-              style={{ backgroundImage: "url(" + image + ")" }}
-            />
+            <div className={classes.background} style={{ backgroundImage: `url(${image})` }} />
           ) : null}
         </Drawer>
       </Hidden>
@@ -98,16 +90,13 @@ const Sidebar = ({ ...props }) => {
           variant="permanent"
           open
           classes={{
-            paper: classes.drawerPaper
+            paper: classes.drawerPaper,
           }}
         >
           {brand}
           <div className={classes.sidebarWrapper}>{links}</div>
           {image !== undefined ? (
-            <div
-              className={classes.background}
-              style={{ backgroundImage: "url(" + image + ")" }}
-            />
+            <div className={classes.background} style={{ backgroundImage: `url(${image})` }} />
           ) : null}
         </Drawer>
       </Hidden>
@@ -116,7 +105,7 @@ const Sidebar = ({ ...props }) => {
 };
 
 Sidebar.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(sidebarStyle)(Sidebar);

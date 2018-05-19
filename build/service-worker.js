@@ -1,8 +1,9 @@
 'use strict';
 var precacheConfig = [
-    ['/index.html', 'f65f98969dc50c20e264bd064180719f'],
-    ['/static/css/main.08bcaf2d.css', 'b0841e6f0f499863c19644abcf417c54'],
-    ['/static/js/main.6288063f.js', 'c1310bc17f5ccc67a4025e5074ff1511'],
+    ['/index.html', '4109152a7f453f3bd7283b96f3f7cf00'],
+    ['/static/css/main.318c3540.css', '5e43732a93e31f627d29b6dd93b44624'],
+    ['/static/js/main.fe65952f.js', '5770027bc6fd49a3206047a1085f41d6'],
+    ['/static/media/sidebar-2.310509c9.jpg', '310509c95512893dc661bd3a6b0d2a5d'],
   ],
   cacheName =
     'sw-precache-v3-sw-precache-webpack-plugin-' +

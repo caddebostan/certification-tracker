@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { List, ListItem, withStyles } from "material-ui";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { List, ListItem, withStyles } from 'material-ui';
 
-import footerStyle from "../../assets/jss/material-dashboard-react/footerStyle";
+import footerStyle from '../../assets/jss/material-dashboard-react/footerStyle';
 
 function Footer({ ...props }) {
   const { classes } = props;
@@ -12,22 +12,22 @@ function Footer({ ...props }) {
         <div className={classes.left}>
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
-              <a href="#home" className={classes.block}>
+              <a href="/home" className={classes.block}>
                 Home
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a href="#company" className={classes.block}>
+              <a href="/company" className={classes.block}>
                 Company
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a href="#portfolio" className={classes.block}>
+              <a href="/portfolio" className={classes.block}>
                 Portfolio
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a href="#blog" className={classes.block}>
+              <a href="/blog" className={classes.block}>
                 Blog
               </a>
             </ListItem>
@@ -35,7 +35,7 @@ function Footer({ ...props }) {
         </div>
         <p className={classes.right}>
           <span>
-            &copy; {1900 + new Date().getYear()}{" "}
+            &copy; {1900 + new Date().getYear()}{' '}
             <a href="#" className={classes.a}>
               Certification Tracker
             </a>, made with love for a better web
@@ -47,7 +47,7 @@ function Footer({ ...props }) {
 }
 
 Footer.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(footerStyle)(Footer);
