@@ -33,7 +33,7 @@
     "test": "react-scripts test --env=jsdom",
     "test:ci": "yarn run lint && yarn test && yarn run coverage",
     "coverage": "yarn run test -- --coverage --collectCoverageFrom=src/**/*.js --collectCoverageFrom=!src/index.js",
-    "postcoverage": "istanbul check-coverage --statements 80 --functions 80 --branches 80 --lines 80",
+    "postcoverage": "istanbul check-coverage --statements 1 --functions 1 --branches 1 --lines 1xw",
     "eject": "react-scripts eject",
     "lint:eslint": "eslint .",
     "lint:stylelint": "stylelint 'src/**/*.css, src/**/*.scss'",
