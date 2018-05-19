@@ -36,7 +36,7 @@ function Footer({ ...props }) {
         <p className={classes.right}>
           <span>
             &copy; {1900 + new Date().getYear()}{' '}
-            <a href="#" className={classes.a}>
+            <a href="/" className={classes.a}>
               Certification Tracker
             </a>, made with love for a better web
           </span>
