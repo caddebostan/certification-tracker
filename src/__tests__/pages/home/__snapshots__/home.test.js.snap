@@ -1,7 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
-  Home
-</div>
+<Dashboard
+  classes={
+    Object {
+      "successText": "Dashboard-successText-1",
+      "upArrowCardCategory": "Dashboard-upArrowCardCategory-2",
+    }
+  }
+/>
 `;

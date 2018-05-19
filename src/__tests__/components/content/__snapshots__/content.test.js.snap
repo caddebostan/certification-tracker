@@ -1,9 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<WithStyles(ResponsiveDrawer)>
-  <main
-    className="content"
-  />
-</WithStyles(ResponsiveDrawer)>
+<CustomInput
+  classes={
+    Object {
+      "disabled": "CustomInput-disabled-1",
+      "feedback": "CustomInput-feedback-8",
+      "formControl": "CustomInput-formControl-10",
+      "labelRoot": "CustomInput-labelRoot-5",
+      "labelRootError": "CustomInput-labelRootError-6",
+      "labelRootSuccess": "CustomInput-labelRootSuccess-7",
+      "marginTop": "CustomInput-marginTop-9",
+      "underline": "CustomInput-underline-2",
+      "underlineError": "CustomInput-underlineError-3",
+      "underlineSuccess": "CustomInput-underlineSuccess-4",
+    }
+  }
+/>
 `;

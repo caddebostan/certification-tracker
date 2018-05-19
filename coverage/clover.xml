@@ -1,88 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1526680167160" clover="3.2.0">
-  <project timestamp="1526680167161" name="All files">
-    <metrics statements="85" coveredstatements="25" conditionals="32" coveredconditionals="2" methods="37" coveredmethods="7" elements="154" coveredelements="34" complexity="0" loc="85" ncloc="85" packages="27" files="28" classes="28">
+<coverage generated="1526764341139" clover="3.2.0">
+  <project timestamp="1526764341139" name="All files">
+    <metrics statements="31" coveredstatements="2" conditionals="24" coveredconditionals="2" methods="6" coveredmethods="0" elements="61" coveredelements="4" complexity="0" loc="31" ncloc="31" packages="5" files="5" classes="5">
       <package name="src">
         <metrics statements="3" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="0"/>
         <file name="setupTests.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/setupTests.js">
           <metrics statements="3" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="0"/>
-          <line num="6" count="4" type="stmt"/>
-          <line num="8" count="4" type="stmt"/>
+          <line num="6" count="3" type="stmt"/>
+          <line num="8" count="3" type="stmt"/>
           <line num="11" count="0" type="stmt"/>
         </file>
       </package>
-      <package name="src.components.content">
+      <package name="src.components">
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="index.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/components/content/index.js">
+        <file name="index.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/components/index.js">
           <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        </file>
-      </package>
-      <package name="src.components.content.view">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <file name="contentView.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/components/content/view/contentView.js">
-          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-          <line num="8" count="1" type="stmt"/>
-          <line num="10" count="1" type="stmt"/>
-          <line num="14" count="1" type="stmt"/>
-          <line num="15" count="1" type="stmt"/>
-          <line num="23" count="2" type="stmt"/>
-        </file>
-      </package>
-      <package name="src.components.example">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="index.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/components/example/index.js">
-          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        </file>
-      </package>
-      <package name="src.components.example.container">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="exampleContainer.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/components/example/container/exampleContainer.js">
-          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        </file>
-      </package>
-      <package name="src.components.example.view">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <file name="exampleView.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/components/example/view/exampleView.js">
-          <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-          <line num="6" count="0" type="stmt"/>
-          <line num="8" count="0" type="stmt"/>
-          <line num="12" count="0" type="stmt"/>
-        </file>
-      </package>
-      <package name="src.components.menu">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="index.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/components/menu/index.js">
-          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        </file>
-      </package>
-      <package name="src.components.menu.view">
-        <metrics statements="9" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="1"/>
-        <file name="menuView.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/components/menu/view/menuView.js">
-          <metrics statements="9" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="1"/>
-          <line num="17" count="3" type="stmt"/>
-          <line num="19" count="3" type="stmt"/>
-          <line num="56" count="0" type="stmt"/>
-          <line num="58" count="0" type="stmt"/>
-          <line num="64" count="0" type="stmt"/>
-          <line num="68" count="0" type="stmt"/>
-          <line num="71" count="0" type="stmt"/>
-          <line num="80" count="0" type="stmt"/>
-          <line num="130" count="3" type="stmt"/>
-        </file>
-      </package>
-      <package name="src.components.menuList">
-        <metrics statements="1" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <file name="index.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/components/menuList/index.js">
-          <metrics statements="1" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
-          <line num="1" count="0" type="cond" truecount="0" falsecount="4"/>
-        </file>
-      </package>
-      <package name="src.components.menuList.view">
-        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="menuListView.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/components/menuList/view/menuListView.js">
-          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="17" count="3" type="stmt"/>
-          <line num="75" count="3" type="stmt"/>
         </file>
       </package>
       <package name="src.config">
@@ -112,128 +44,6 @@
           <line num="38" count="0" type="stmt"/>
         </file>
       </package>
-      <package name="src.pages">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="index.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/pages/index.js">
-          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        </file>
-      </package>
-      <package name="src.pages.application">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <file name="applicationView.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/pages/application/applicationView.js">
-          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-          <line num="14" count="1" type="stmt"/>
-          <line num="16" count="1" type="stmt"/>
-          <line num="20" count="1" type="stmt"/>
-        </file>
-        <file name="materialTheme.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/pages/application/materialTheme.js">
-          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="5" count="1" type="stmt"/>
-        </file>
-      </package>
-      <package name="src.pages.example">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="index.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/pages/example/index.js">
-          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        </file>
-      </package>
-      <package name="src.pages.example.container">
-        <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
-        <file name="exampleContainer.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/pages/example/container/exampleContainer.js">
-          <metrics statements="7" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
-          <line num="7" count="0" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
-          <line num="13" count="0" type="stmt"/>
-          <line num="14" count="0" type="stmt"/>
-          <line num="16" count="0" type="stmt"/>
-          <line num="17" count="0" type="stmt"/>
-          <line num="22" count="0" type="stmt"/>
-        </file>
-      </package>
-      <package name="src.pages.example.view">
-        <metrics statements="6" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <file name="exampleView.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/pages/example/view/exampleView.js">
-          <metrics statements="6" coveredstatements="4" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
-          <line num="22" count="0" type="stmt"/>
-          <line num="24" count="0" type="stmt"/>
-          <line num="108" count="1" type="stmt"/>
-          <line num="115" count="1" type="stmt"/>
-          <line num="117" count="1" type="stmt"/>
-          <line num="119" count="1" type="stmt"/>
-        </file>
-      </package>
-      <package name="src.pages.home">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="index.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/pages/home/index.js">
-          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        </file>
-      </package>
-      <package name="src.pages.home.container">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <file name="homeContainer.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/pages/home/container/homeContainer.js">
-          <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-          <line num="7" count="0" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
-          <line num="13" count="0" type="stmt"/>
-        </file>
-      </package>
-      <package name="src.pages.home.view">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <file name="homeView.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/pages/home/view/homeView.js">
-          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-          <line num="7" count="1" type="stmt"/>
-          <line num="9" count="1" type="stmt"/>
-          <line num="13" count="1" type="stmt"/>
-        </file>
-      </package>
-      <package name="src.pages.pageOne">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="index.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/pages/pageOne/index.js">
-          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        </file>
-      </package>
-      <package name="src.pages.pageOne.container">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <file name="pageOneContainer.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/pages/pageOne/container/pageOneContainer.js">
-          <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-          <line num="7" count="0" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
-          <line num="13" count="0" type="stmt"/>
-        </file>
-      </package>
-      <package name="src.pages.pageOne.view">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <file name="pageOneView.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/pages/pageOne/view/pageOneView.js">
-          <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-          <line num="7" count="0" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
-          <line num="13" count="0" type="stmt"/>
-        </file>
-      </package>
-      <package name="src.pages.pageTwo">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="index.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/pages/pageTwo/index.js">
-          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        </file>
-      </package>
-      <package name="src.pages.pageTwo.container">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <file name="pageTwoContainer.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/pages/pageTwo/container/pageTwoContainer.js">
-          <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-          <line num="7" count="0" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
-          <line num="13" count="0" type="stmt"/>
-        </file>
-      </package>
-      <package name="src.pages.pageTwo.view">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <file name="pageTwoView.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/pages/pageTwo/view/pageTwoView.js">
-          <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-          <line num="7" count="0" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
-          <line num="13" count="0" type="stmt"/>
-        </file>
-      </package>
       <package name="src.reducers">
         <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="index.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/reducers/index.js">
@@ -244,11 +54,12 @@
         </file>
       </package>
       <package name="src.utilities">
-        <metrics statements="3" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <metrics statements="4" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <file name="validation.js" path="/Users/mistik/Desktop/projects/certification-tracker/src/utilities/validation.js">
-          <metrics statements="3" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
-          <line num="2" count="1" type="cond" truecount="0" falsecount="2"/>
-          <line num="3" count="1" type="stmt"/>
+          <metrics statements="4" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="3" count="0" type="stmt"/>
           <line num="4" count="0" type="cond" truecount="0" falsecount="4"/>
         </file>
       </package>
