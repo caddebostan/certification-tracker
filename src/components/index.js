@@ -2,7 +2,7 @@
 // // // Cards
 // #############################
 
-import ChartCard from './cards/regularCard';
+import ChartCard from './cards/chartCard';
 import ProfileCard from './cards/profileCard';
 import RegularCard from './cards/regularCard';
 import StatsCard from './cards/statsCard';
