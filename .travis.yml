@@ -13,12 +13,12 @@ script:
 after_success:
   - codecov
 
-before_deploy:
-  - yarn run build
-  - cp ./build/index.html ./build/200.html
+# before_deploy:
+#   - yarn run build
+#   - cp ./build/index.html ./build/200.html
 
 deploy:
   provider: surge
   project: ./build/
-  domain: certification-tracker.surge.sh
+  domain: certification-tracker-test.surge.sh
   skip_cleanup: true
