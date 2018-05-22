@@ -41,6 +41,12 @@ import Header from './header/header';
 import HeaderLinks from './header/headerLinks';
 
 // ##############################
+// // // Forms
+// #############################
+
+import AddmisionsForm from './forms/addmisionsForm';
+
+// ##############################
 // // // Sidebar
 // #############################
 
@@ -82,6 +88,7 @@ import Small from './typography/small';
 import A from './typography/a';
 
 export {
+  AddmisionsForm,
   ChartCard,
   ProfileCard,
   RegularCard,

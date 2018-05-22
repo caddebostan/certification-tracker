@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import { Grid } from "material-ui";
 
 // Constants
 
 // Components
-import { TableList } from '../../../components';
+import { RegularCard, ItemGrid, Table, AddmisionsForm } from '../../../components';
 
 /*
 *            Props Name        Description                                     Value
@@ -17,6 +18,8 @@ class AddmisionsView extends Component {
     this.state = {
       tableData: [],
       tableHead: [],
+      selectedRowItem: null,
+      cardSubtitle: "Basvuruyu sec ve onayla.",
     };
   }
 
@@ -39,22 +42,46 @@ class AddmisionsView extends Component {
   // Component Functions
 
   _handleOnRowClick = id => {
-    console.log(id);
+    this.setState({
+      selectedRowItem: id,
+      cardSubtitle: "Duzenle ve onayla.",
+    })
   };
 
+  _getContent = () => {
+    const { selectedRowItem, tableData, tableHead, tableHeaderColor } = this.state;
+
+    console.log("ugurrrr");
+    console.log(selectedRowItem);
+    
+    if (!selectedRowItem){
+      return (
+        <Table
+          handleOnRowClick={(e) => this._handleOnRowClick(e)}
+          tableHeaderColor={tableHeaderColor}
+          tableHead={tableHead}
+          tableData={tableData}
+        />
+      );
+    } else {
+      return (<AddmisionsForm selectedItemID={selectedRowItem}/> );
+    }
+  }
+
   render() {
-    const { tableData, tableHead } = this.state;
+    const { cardSubtitle } = this.state;
 
     return (
-      <TableList
-        tableData={tableData}
-        handleOnRowClick={e => this._handleOnRowClick(e)}
-        tableHead={tableHead}
-        tableHeaderColor="primary"
-        cardTitle="Basvurular"
-        cardSubtitle="Basvuruyu sec ve onayla."
-        isPlainCard={false}
-      />
+      <Grid container>
+      <ItemGrid xs={12} sm={12} md={12}>
+        <RegularCard
+          plainCard={false}
+          cardTitle="Basvurular"
+          cardSubtitle={cardSubtitle}
+          content={this._getContent()}
+        />
+      </ItemGrid>
+    </Grid>
     );
   }
 }
