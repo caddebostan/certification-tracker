@@ -1,11 +1,7 @@
-import React from "react";
-import { Grid, InputLabel, } from "material-ui";
+import React from 'react';
+import { Grid, InputLabel } from 'material-ui';
 
-import {
-  Button,
-  CustomInput,
-  ItemGrid
-} from "../../components";
+import { CustomInput, ItemGrid } from '../../components';
 
 function AddmisionsForm({ ...props }) {
   return (
@@ -16,10 +12,10 @@ function AddmisionsForm({ ...props }) {
             labelText="Sirket Adi (disabled)"
             id="company-disabled"
             formControlProps={{
-              fullWidth: true
+              fullWidth: true,
             }}
             inputProps={{
-              disabled: true
+              disabled: true,
             }}
           />
         </ItemGrid>
@@ -28,7 +24,7 @@ function AddmisionsForm({ ...props }) {
             labelText="Ad"
             id="username"
             formControlProps={{
-              fullWidth: true
+              fullWidth: true,
             }}
           />
         </ItemGrid>
@@ -37,7 +33,7 @@ function AddmisionsForm({ ...props }) {
             labelText="Email"
             id="email-address"
             formControlProps={{
-              fullWidth: true
+              fullWidth: true,
             }}
           />
         </ItemGrid>
@@ -48,7 +44,7 @@ function AddmisionsForm({ ...props }) {
             labelText="Adi"
             id="first-name"
             formControlProps={{
-              fullWidth: true
+              fullWidth: true,
             }}
           />
         </ItemGrid>
@@ -57,7 +53,7 @@ function AddmisionsForm({ ...props }) {
             labelText="Soy adi"
             id="last-name"
             formControlProps={{
-              fullWidth: true
+              fullWidth: true,
             }}
           />
         </ItemGrid>
@@ -68,7 +64,7 @@ function AddmisionsForm({ ...props }) {
             labelText="Sehir"
             id="city"
             formControlProps={{
-              fullWidth: true
+              fullWidth: true,
             }}
           />
         </ItemGrid>
@@ -77,7 +73,7 @@ function AddmisionsForm({ ...props }) {
             labelText="Ulke"
             id="country"
             formControlProps={{
-              fullWidth: true
+              fullWidth: true,
             }}
           />
         </ItemGrid>
@@ -86,25 +82,23 @@ function AddmisionsForm({ ...props }) {
             labelText="Postal Code"
             id="postal-code"
             formControlProps={{
-              fullWidth: true
+              fullWidth: true,
             }}
           />
         </ItemGrid>
       </Grid>
       <Grid container>
         <ItemGrid xs={12} sm={12} md={12}>
-          <InputLabel style={{ color: "#AAAAAA" }}>
-            About me
-          </InputLabel>
+          <InputLabel style={{ color: '#AAAAAA' }}>About me</InputLabel>
           <CustomInput
             labelText="Lorem ipsum dol amor"
             id="about-me"
             formControlProps={{
-              fullWidth: true
+              fullWidth: true,
             }}
             inputProps={{
               multiline: true,
-              rows: 5
+              rows: 5,
             }}
           />
         </ItemGrid>
