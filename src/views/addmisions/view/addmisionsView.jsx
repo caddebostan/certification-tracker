@@ -4,7 +4,7 @@ import { Grid } from "material-ui";
 // Constants
 
 // Components
-import { RegularCard, ItemGrid, Table, AddmisionsForm } from '../../../components';
+import { RegularCard, ItemGrid, Table, AddmisionsForm, Button } from '../../../components';
 
 /*
 *            Props Name        Description                                     Value
@@ -48,12 +48,15 @@ class AddmisionsView extends Component {
     })
   };
 
+  _handleBackButton = () => {
+    this.setState({
+      selectedRowItem: null,
+    })
+  }
+
   _getContent = () => {
     const { selectedRowItem, tableData, tableHead, tableHeaderColor } = this.state;
 
-    console.log("ugurrrr");
-    console.log(selectedRowItem);
-    
     if (!selectedRowItem){
       return (
         <Table
@@ -68,6 +71,21 @@ class AddmisionsView extends Component {
     }
   }
 
+  _getFooter = () => {
+    const { selectedRowItem } = this.state;
+    if (selectedRowItem) {
+      return (
+        <div>
+          <Button color="rose" onClick={() => this._handleBackButton()}>Geri</Button>         
+          <Button color="primary">Kaydet</Button>
+        </div>
+        
+      );
+    } else {
+      return null;
+    }
+  }
+
   render() {
     const { cardSubtitle } = this.state;
 
@@ -79,6 +97,7 @@ class AddmisionsView extends Component {
           cardTitle="Basvurular"
           cardSubtitle={cardSubtitle}
           content={this._getContent()}
+          footer={this._getFooter()}
         />
       </ItemGrid>
     </Grid>
