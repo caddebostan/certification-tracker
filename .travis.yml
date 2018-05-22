@@ -14,11 +14,11 @@ after_success:
   - codecov
 
 before_deploy:
-  - react-scripts build
+  # - react-scripts build
   - cp ./build/index.html ./build/200.html
 
 deploy:
   provider: surge
   project: ./build/
-  domain: certification-tracker-test.surge.sh
+  domain: certification-tracker.surge.sh
   skip_cleanup: true
