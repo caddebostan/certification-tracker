@@ -12,8 +12,17 @@ import PropTypes from "prop-types";
 
 import tableStyle from "../../assets/jss/material-dashboard-react/tableStyle";
 
-function CustomTable({ ...props }) {
-  const { classes, tableHead, tableData, tableHeaderColor } = props;
+// TODO: its accep it coming from our database
+const _handleOnRowClick = (id, props) => {
+  const { handleOnRowClick } = props;
+
+  if (handleOnRowClick) {
+    handleOnRowClick(id);
+  }
+}
+
+const CustomTable = ({ ...props }) => {
+  const { classes, tableHead, tableData, tableHeaderColor, handleOnRowClick } = props;
   return (
     <div className={classes.tableResponsive}>
       <Table className={classes.table}>
@@ -36,14 +45,14 @@ function CustomTable({ ...props }) {
         <TableBody>
           {tableData.map((prop, key) => {
             return (
-              <TableRow key={key}>
-                {prop.map((prop, key) => {
-                  return (
-                    <TableCell className={classes.tableCell} key={key}>
-                      {prop}
-                    </TableCell>
-                  );
-                })}
+              <TableRow onClick={() => _handleOnRowClick(key, { ...props })} key={key} className="table-row">
+                  {prop.map((prop, key) => {
+                    return (
+                      <TableCell className={classes.tableCell} key={key}>
+                        {prop}
+                      </TableCell>
+                    );
+                  })}
               </TableRow>
             );
           })}

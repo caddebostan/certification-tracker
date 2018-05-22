@@ -1,6 +1,6 @@
 import DashboardPage from "../views/dashboard/dashboard";
 import UserProfile from "../views/userProfile/userProfile";
-import TableList from "../views/tableList/tableList";
+import Addmisions from "../views/addmisions/view/addmisionsView";
 import Typography from "../views/typography/typography";
 import Icons from "../views/icons/icons";
 import Maps from "../views/maps/maps";
@@ -30,14 +30,14 @@ const dashboardRoutes = [
     sidebarName: "Basvurular",
     navbarName: "Basvurular",
     icon: List,
-    component: UserProfile
+    component: Addmisions
   },
   {
     path: "/planlama",
     sidebarName: "Planlama",
     navbarName: "Planlama",
     icon: Assignment,
-    component: TableList
+    component: UserProfile
   },
   {
     path: "/tetkikler",

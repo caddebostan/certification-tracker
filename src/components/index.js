@@ -58,6 +58,7 @@ import SnackbarContent from './snackbar/snackbarContent';
 // #############################
 
 import Table from './table/table';
+import TableList from './tableList/tableList';
 
 // ##############################
 // // // Tasks
@@ -97,6 +98,7 @@ export {
   Snackbar,
   SnackbarContent,
   Table,
+  TableList,
   Tasks,
   P,
   Quote,
