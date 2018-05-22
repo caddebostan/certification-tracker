@@ -41,6 +41,12 @@ import Header from './header/header';
 import HeaderLinks from './header/headerLinks';
 
 // ##############################
+// // // Forms
+// #############################
+
+import AddmisionsForm from './forms/addmisionsForm';
+
+// ##############################
 // // // Sidebar
 // #############################
 
@@ -58,6 +64,7 @@ import SnackbarContent from './snackbar/snackbarContent';
 // #############################
 
 import Table from './table/table';
+import TableList from './tableList/tableList';
 
 // ##############################
 // // // Tasks
@@ -81,6 +88,7 @@ import Small from './typography/small';
 import A from './typography/a';
 
 export {
+  AddmisionsForm,
   ChartCard,
   ProfileCard,
   RegularCard,
@@ -97,6 +105,7 @@ export {
   Snackbar,
   SnackbarContent,
   Table,
+  TableList,
   Tasks,
   P,
   Quote,
