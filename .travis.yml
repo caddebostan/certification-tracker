@@ -20,5 +20,5 @@ before_deploy:
 deploy:
   provider: surge
   project: ./build/
-  domain: certification-tracker.surge.sh
+  domain: certification-tracker-test.surge.sh
   skip_cleanup: true
