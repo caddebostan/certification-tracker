@@ -1,7 +1,7 @@
-import React from "react";
-import { Grid } from "material-ui";
+import React from 'react';
+import { Grid } from 'material-ui';
 
-import { RegularCard, Table, ItemGrid } from "../../components";
+import { RegularCard, Table, ItemGrid } from '../../components';
 
 /*
 *            Props Name        Description                                     Value
@@ -16,27 +16,28 @@ const TableList = ({ ...props }) => {
     cardSubtitle,
     tableHead,
     tableData,
-    handleOnRowClick
+    tableHeaderColor,
+    handleOnRowClick,
   } = props;
   return (
     <Grid container>
       <ItemGrid xs={12} sm={12} md={12}>
         <RegularCard
-          plainCard={props.isPlainCard}
-          cardTitle={props.cardTitle}
-          cardSubtitle={props.cardSubtitle}
+          plainCard={isPlainCard}
+          cardTitle={cardTitle}
+          cardSubtitle={cardSubtitle}
           content={
             <Table
-              handleOnRowClick={(e) => handleOnRowClick(e)}
-              tableHeaderColor={props.tableHeaderColor}
-              tableHead={props.tableHead}
-              tableData={props.tableData}
+              handleOnRowClick={e => handleOnRowClick(e)}
+              tableHeaderColor={tableHeaderColor}
+              tableHead={tableHead}
+              tableData={tableData}
             />
           }
         />
       </ItemGrid>
     </Grid>
   );
-}
+};
 
 export default TableList;
