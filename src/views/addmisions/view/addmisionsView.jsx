@@ -76,8 +76,10 @@ class AddmisionsView extends Component {
     if (selectedRowItem) {
       return (
         <div>
-          <Button color="rose" onClick={() => this._handleBackButton()}>Geri</Button>         
-          <Button color="primary">Kaydet</Button>
+          <Button color="danger" onClick={() => this._handleBackButton()}>
+            Geri
+          </Button>
+          <Button color="rose">Kaydet ve Onayla</Button>
         </div>
         
       );
