@@ -16,7 +16,8 @@ function CustomInput({ ...props }) {
     inputProps,
     error,
     success,
-    type
+    type,
+    helperText
   } = props;
 
   const labelClasses = cx({
@@ -51,6 +52,7 @@ function CustomInput({ ...props }) {
           disabled: classes.disabled,
           underline: underlineClasses,
         }}
+        helperText={helperText}
         type={type}
         id={id}
         {...inputProps}

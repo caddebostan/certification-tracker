@@ -15,7 +15,7 @@ const tasksCardStyle = theme => ({
     flex: "none",
     ...cardHeader,
     ...defaultFont,
-    background: "linear-gradient(60deg, #ab47bc, #8e24aa)",
+    background: "linear-gradient(60deg, #d04653, #931622)",
     ...primaryBoxShadow
   },
   cardTitle: {
