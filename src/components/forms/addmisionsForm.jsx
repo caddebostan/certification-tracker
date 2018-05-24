@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, InputLabel, TextField, MenuItem } from "material-ui";
+import { Grid, InputLabel, TextField, MenuItem } from "@material-ui/core";
 
 import { CustomInput, ItemGrid } from '../../components';
 
