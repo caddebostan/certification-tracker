@@ -1,13 +1,14 @@
-import React from "react";
-import { Grid, InputLabel, TextField, MenuItem, Typography, Checkbox } from "material-ui";
+import React from 'react';
+
+import { Grid, InputLabel, Typography } from '@material-ui/core';
 
 import { CustomInput, ItemGrid, CustomSelect } from '../../components';
 
 const inputDescriptionStyle = {
-  color: "#cbcbcb",
+  color: '#cbcbcb',
   fontSize: '11px',
-}
-
+};
+// eslint-disable-next-line
 const selectData = [
   {
     value: '1',
@@ -27,6 +28,7 @@ const selectData = [
   },
 ];
 
+// eslint-disable-next-line
 function AddmisionsForm({ ...props }) {
   return (
     <div>
@@ -54,15 +56,12 @@ function AddmisionsForm({ ...props }) {
               fullWidth: true,
             }}
           />
-          <InputLabel style={inputDescriptionStyle}>
-            (Ticaret Sicili Gazetesi’ndeki)
-          </InputLabel>
+          <InputLabel style={inputDescriptionStyle}>(Ticaret Sicili Gazetesi’ndeki)</InputLabel>
         </ItemGrid>
-
       </Grid>
 
       <Grid container>
-      <ItemGrid xs={12} sm={12} md={4}>
+        <ItemGrid xs={12} sm={12} md={4}>
           <CustomInput
             labelText="Gerçekleştirilen Faaliyet"
             id="postal-code"
@@ -92,12 +91,12 @@ function AddmisionsForm({ ...props }) {
       </Grid>
 
       <Grid container>
-      <ItemGrid xs={12} sm={12} md={4}>
+        <ItemGrid xs={12} sm={12} md={4}>
           <CustomInput
             labelText="Telefon"
             id="last-name"
             formControlProps={{
-              fullWidth: true
+              fullWidth: true,
             }}
           />
         </ItemGrid>
@@ -115,14 +114,14 @@ function AddmisionsForm({ ...props }) {
             labelText="Web Adresi / E-mail"
             id="city"
             formControlProps={{
-              fullWidth: true
+              fullWidth: true,
             }}
           />
         </ItemGrid>
       </Grid>
 
-    <Grid container>      
-      <ItemGrid xs={12} sm={12} md={12}>
+      <Grid container>
+        <ItemGrid xs={12} sm={12} md={12}>
           <CustomInput
             labelText="Adres"
             id="country"
@@ -141,9 +140,9 @@ function AddmisionsForm({ ...props }) {
           <CustomInput
             labelText="Toplam Çalışan Sayısı"
             id="city"
-            type="number"            
+            type="number"
             formControlProps={{
-              fullWidth: true
+              fullWidth: true,
             }}
           />
         </ItemGrid>
@@ -151,9 +150,9 @@ function AddmisionsForm({ ...props }) {
           <CustomInput
             labelText="Yönetici Sayısı"
             id="country"
-            type="number"            
+            type="number"
             formControlProps={{
-              fullWidth: true
+              fullWidth: true,
             }}
           />
         </ItemGrid>
@@ -161,9 +160,9 @@ function AddmisionsForm({ ...props }) {
           <CustomInput
             labelText="Vardiya Sayısı"
             id="postal-code"
-            type="number"            
+            type="number"
             formControlProps={{
-              fullWidth: true
+              fullWidth: true,
             }}
           />
         </ItemGrid>
@@ -173,7 +172,7 @@ function AddmisionsForm({ ...props }) {
             id="postal-code"
             type="number"
             formControlProps={{
-              fullWidth: true
+              fullWidth: true,
             }}
           />
         </ItemGrid>
@@ -183,7 +182,7 @@ function AddmisionsForm({ ...props }) {
             id="postal-code"
             type="number"
             formControlProps={{
-              fullWidth: true
+              fullWidth: true,
             }}
           />
         </ItemGrid>
@@ -193,12 +192,10 @@ function AddmisionsForm({ ...props }) {
             id="postal-code"
             type="number"
             formControlProps={{
-              fullWidth: true
+              fullWidth: true,
             }}
           />
-          <InputLabel style={inputDescriptionStyle}>
-            (Şube / Geçici Saha / Şantiye)
-          </InputLabel>
+          <InputLabel style={inputDescriptionStyle}>(Şube / Geçici Saha / Şantiye)</InputLabel>
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={4}>
           <CustomInput
@@ -209,71 +206,67 @@ function AddmisionsForm({ ...props }) {
               fullWidth: true,
             }}
           />
-          <InputLabel style={inputDescriptionStyle}>
-            (Şube / Geçici Saha / Şantiye)
-          </InputLabel>
+          <InputLabel style={inputDescriptionStyle}>(Şube / Geçici Saha / Şantiye)</InputLabel>
         </ItemGrid>
       </Grid>
 
       <Grid container>
         <ItemGrid xs={12} sm={6} md={12}>
           <Typography color="textSecondary">
-          Tetkik Edilecek Standart (Talep Edilen Belge Standartı)
+            Tetkik Edilecek Standart (Talep Edilen Belge Standartı)
           </Typography>
         </ItemGrid>
 
         <ItemGrid xs={12} sm={6} md={3}>
-        <CustomSelect
-          label="ISO 9001 - ISO 14001"
-          value="ISO 9001 ISO 14001"
-          formControlProps={{
-            fullWidth: true,
-          }}
-        />
+          <CustomSelect
+            label="ISO 9001 - ISO 14001"
+            value="ISO 9001 ISO 14001"
+            formControlProps={{
+              fullWidth: true,
+            }}
+          />
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={3}>
-        <CustomSelect
-          label="OHSAS 18001 - ISO 22000"
-          value=""
-          formControlProps={{
-            fullWidth: true,
-          }}
-        />
+          <CustomSelect
+            label="OHSAS 18001 - ISO 22000"
+            value=""
+            formControlProps={{
+              fullWidth: true,
+            }}
+          />
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={3}>
-        <CustomSelect
-          label="SO 13485 - ISO 27001"
-          value=""
-          formControlProps={{
-            fullWidth: true,
-          }}
-        />
+          <CustomSelect
+            label="SO 13485 - ISO 27001"
+            value=""
+            formControlProps={{
+              fullWidth: true,
+            }}
+          />
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={3}>
-        <CustomSelect
-          label=" ISO 10002 SA 8000"
-          value=""
-          formControlProps={{
-            fullWidth: true,
-          }}
-        />
+          <CustomSelect
+            label=" ISO 10002 SA 8000"
+            value=""
+            formControlProps={{
+              fullWidth: true,
+            }}
+          />
         </ItemGrid>
         <ItemGrid xs={12} sm={12} md={12}>
           <CustomInput
-              labelText="Varsa diger talep edilen belgeler."
-              id="postal-code"
-              formControlProps={{
-                fullWidth: true
-              }}
-            />
+            labelText="Varsa diger talep edilen belgeler."
+            id="postal-code"
+            formControlProps={{
+              fullWidth: true,
+            }}
+          />
         </ItemGrid>
-      </Grid> 
+      </Grid>
 
       <Grid container>
         <ItemGrid xs={12} sm={6} md={12}>
-          <Typography color="textSecondary">
-            Firmanın Sistem Entegreasyon Düzeyi
-          </Typography>
+          <Typography color="textSecondary">Firmanın Sistem Entegreasyon Düzeyi</Typography>
         </ItemGrid>
 
         <ItemGrid xs={12} sm={6} md={4}>
@@ -330,25 +323,21 @@ function AddmisionsForm({ ...props }) {
             }}
           />
         </ItemGrid>
-      </Grid> 
+      </Grid>
 
       <Grid container>
         <ItemGrid xs={12} sm={6} md={12}>
-          <Typography color="textSecondary">
-            Firmanın Sistem Entegreasyon Düzeyi
-          </Typography>
+          <Typography color="textSecondary">Firmanın Sistem Entegreasyon Düzeyi</Typography>
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={6}>
           <CustomInput
-              labelText="Firma veya Danışman"
-              id=""
-              formControlProps={{
-                fullWidth: true
-              }}
+            labelText="Firma veya Danışman"
+            id=""
+            formControlProps={{
+              fullWidth: true,
+            }}
           />
-          <InputLabel style={inputDescriptionStyle}>
-            (Danışmanlık Hizmeti Alındıysa)
-          </InputLabel>
+          <InputLabel style={inputDescriptionStyle}>(Danışmanlık Hizmeti Alındıysa)</InputLabel>
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={12}>
           <CustomSelect
@@ -378,9 +367,7 @@ function AddmisionsForm({ ...props }) {
               fullWidth: true,
             }}
           />
-          <InputLabel style={inputDescriptionStyle}>
-            (Talep Ediliyorsa)
-          </InputLabel>
+          <InputLabel style={inputDescriptionStyle}>(Talep Ediliyorsa)</InputLabel>
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={4}>
           <CustomInput
@@ -391,124 +378,117 @@ function AddmisionsForm({ ...props }) {
               fullWidth: true,
             }}
           />
-          <InputLabel style={inputDescriptionStyle}>
-            (Talep Ediliyorsa)
-          </InputLabel>
+          <InputLabel style={inputDescriptionStyle}>(Talep Ediliyorsa)</InputLabel>
         </ItemGrid>
       </Grid>
       <Grid container>
         <ItemGrid xs={12} sm={12} md={6}>
           <CustomInput
-              labelText="Standart Hariç Tutmalar Var mı? Hangi Maddeler?"
-              id="postal-code"
-              formControlProps={{
-                fullWidth: true
-              }}
-              inputProps={{
-                multiline: true,
-                rows: 5
-              }}
-            />
-          <InputLabel style={inputDescriptionStyle}>
-            Maddeleri Yaziniz.
-          </InputLabel>
+            labelText="Standart Hariç Tutmalar Var mı? Hangi Maddeler?"
+            id="postal-code"
+            formControlProps={{
+              fullWidth: true,
+            }}
+            inputProps={{
+              multiline: true,
+              rows: 5,
+            }}
+          />
+          <InputLabel style={inputDescriptionStyle}>Maddeleri Yaziniz.</InputLabel>
         </ItemGrid>
         <ItemGrid xs={12} sm={12} md={6}>
           <CustomInput
-              labelText="Resmi Kuruluşlardan Almış Olduğunuz İzin/ruhsat Belgeleri Varsa Belirtiniz."
-              id="postal-code"
-              inputProps={{
-                multiline: true,
-                rows: 5
-              }}
-              formControlProps={{
-                fullWidth: true
-              }}
-            />
-          <InputLabel style={inputDescriptionStyle}>
-            İlgili Yasal Şartlar 
-          </InputLabel>
+            labelText="Resmi Kuruluşlardan Almış Olduğunuz İzin/ruhsat Belgeleri Varsa Belirtiniz."
+            id="postal-code"
+            inputProps={{
+              multiline: true,
+              rows: 5,
+            }}
+            formControlProps={{
+              fullWidth: true,
+            }}
+          />
+          <InputLabel style={inputDescriptionStyle}>İlgili Yasal Şartlar</InputLabel>
         </ItemGrid>
-      </Grid> 
+      </Grid>
 
       <Grid container>
         <ItemGrid xs={12} sm={12} md={6}>
           <CustomInput
-              labelText="Talep Edilen Yönetim Sistemi Hazırlıkları"
-              id="postal-code"
-              formControlProps={{
-                fullWidth: true
-              }}
-              inputProps={{
-                multiline: true,
-                rows: 5
-              }}
-            />
+            labelText="Talep Edilen Yönetim Sistemi Hazırlıkları"
+            id="postal-code"
+            formControlProps={{
+              fullWidth: true,
+            }}
+            inputProps={{
+              multiline: true,
+              rows: 5,
+            }}
+          />
           <InputLabel style={inputDescriptionStyle}>
-          (El kitabı, YGG, içtetkik tarihleri vb.)
+            (El kitabı, YGG, içtetkik tarihleri vb.)
           </InputLabel>
         </ItemGrid>
         <ItemGrid xs={12} sm={12} md={6}>
           <CustomInput
-              labelText="Belgelendirme Faaliyet Kapsamı"
-              id="postal-code"
-              formControlProps={{
-                fullWidth: true
-              }}
-              inputProps={{
-                multiline: true,
-                rows: 5
-              }}
-            />
+            labelText="Belgelendirme Faaliyet Kapsamı"
+            id="postal-code"
+            formControlProps={{
+              fullWidth: true,
+            }}
+            inputProps={{
+              multiline: true,
+              rows: 5,
+            }}
+          />
         </ItemGrid>
-      </Grid> 
-
+      </Grid>
 
       <Grid container>
         <ItemGrid xs={12} sm={12} md={6}>
           <CustomInput
-              labelText="Belgelendirme Kapsamındaki faaliyet alanları, departmanlar, süreçler, Ana Ürünler/hizmetler, Ana Hammaddeler"
-              id="postal-code"
-              formControlProps={{
-                fullWidth: true
-              }}
-              inputProps={{
-                multiline: true,
-                rows: 5
-              }}
-            />
+            labelText="Belgelendirme Kapsamındaki faaliyet alanları, departmanlar, süreçler, Ana Ürünler/hizmetler, Ana Hammaddeler"
+            id="postal-code"
+            formControlProps={{
+              fullWidth: true,
+            }}
+            inputProps={{
+              multiline: true,
+              rows: 5,
+            }}
+          />
           <InputLabel style={inputDescriptionStyle}>
-          (El kitabı, YGG, içtetkik tarihleri vb.)
+            (El kitabı, YGG, içtetkik tarihleri vb.)
           </InputLabel>
         </ItemGrid>
         <ItemGrid xs={12} sm={12} md={6}>
           <CustomInput
-              labelText="Varsa, Dış Kaynaklı Prosesler"
-              id="postal-code"
-              formControlProps={{
-                fullWidth: true
-              }}
-              inputProps={{
-                multiline: true,
-                rows: 5
-              }}
-            />
+            labelText="Varsa, Dış Kaynaklı Prosesler"
+            id="postal-code"
+            formControlProps={{
+              fullWidth: true,
+            }}
+            inputProps={{
+              multiline: true,
+              rows: 5,
+            }}
+          />
         </ItemGrid>
-      </Grid> 
+      </Grid>
 
       <Grid container>
         <ItemGrid xs={12} sm={12} md={12}>
           <CustomInput
-              labelText="Belgelendirme Kapsamındaki faaliyet alanları, departmanlar, süreçler, Ana Ürünler/hizmetler, Ana Hammaddeler"
-              id="postal-code"
-              formControlProps={{
-                fullWidth: true
-              }}
-              inputProps={{
-                multiline: true,
-                rows: 5
-              }}
-            />
+            labelText="Belgelendirme Kapsamındaki faaliyet alanları, departmanlar, süreçler, Ana Ürünler/hizmetler, Ana Hammaddeler"
+            id="postal-code"
+            formControlProps={{
+              fullWidth: true,
+            }}
+            inputProps={{
+              multiline: true,
+              rows: 5,
+            }}
+          />
         </ItemGrid>
         <ItemGrid xs={12} sm={12} md={12}>
           <CustomInput
@@ -523,7 +503,7 @@ function AddmisionsForm({ ...props }) {
             }}
           />
         </ItemGrid>
-      </Grid> 
+      </Grid>
     </div>
   );
 }

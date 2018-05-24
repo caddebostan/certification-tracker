@@ -45,7 +45,8 @@
     "format": "prettier --print-width=100 --single-quote --trailing-comma all --write \"{src,__tests__}/**/*.js\"",
     "lint-staged": "lint-staged",
     "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "lint:fix": "eslint src/ --fix"
   },
   "devDependencies": {
     "codecov": "^3.0.2",
