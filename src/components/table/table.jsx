@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles, Table, TableHead, TableRow, TableBody, TableCell } from 'material-ui';
+import { withStyles, Table, TableHead, TableRow, TableBody, TableCell } from '@material-ui/core';
 
 import PropTypes from 'prop-types';
 

@@ -14,7 +14,7 @@ after_success:
   - codecov
 
 before_deploy:
-  # - react-scripts build
+  - yarn run build
   - cp ./build/index.html ./build/200.html
 
 deploy:
