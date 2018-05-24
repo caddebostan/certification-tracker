@@ -22,6 +22,12 @@ import IconButton from './customButtons/iconButton';
 import CustomInput from './customInput/customInput';
 
 // ##############################
+// // // CustomSelect
+// #############################
+
+import CustomSelect from './customSelect/customSelect';
+
+// ##############################
 // // // Footer
 // #############################
 
@@ -97,6 +103,7 @@ export {
   Button,
   IconButton,
   CustomInput,
+  CustomSelect,
   Footer,
   ItemGrid,
   Header,
