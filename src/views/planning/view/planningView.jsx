@@ -4,7 +4,7 @@ import { Grid } from '@material-ui/core';
 // Constants
 
 // Components
-import { RegularCard, ItemGrid, Table, AddmisionsForm, Button } from '../../../components';
+import { RegularCard, ItemGrid, Table, PlanningForm, Button } from '../../../components';
 
 /*
 *            Props Name        Description                                     Value
@@ -12,7 +12,7 @@ import { RegularCard, ItemGrid, Table, AddmisionsForm, Button } from '../../../c
 *
 */
 
-class AddmisionsView extends Component {
+class PlanningView extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -67,7 +67,7 @@ class AddmisionsView extends Component {
         />
       );
     }
-    return <AddmisionsForm selectedItemID={selectedRowItem} />;
+    return <PlanningForm selectedItemID={selectedRowItem} />;
   };
 
   _getFooter = () => {
@@ -104,4 +104,4 @@ class AddmisionsView extends Component {
   }
 }
 
-export default AddmisionsView;
+export default PlanningView;

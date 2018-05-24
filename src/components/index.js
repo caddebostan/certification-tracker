@@ -45,6 +45,7 @@ import HeaderLinks from './header/headerLinks';
 // #############################
 
 import AddmisionsForm from './forms/addmisionsForm';
+import PlanningForm from './forms/planningForm';
 
 // ##############################
 // // // Sidebar
@@ -108,6 +109,7 @@ export {
   TableList,
   Tasks,
   P,
+  PlanningForm,
   Quote,
   Muted,
   Primary,
