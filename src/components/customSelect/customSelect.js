@@ -16,6 +16,7 @@ function CustomSelect({ ...props }) {
     isChecked,
     value,
     label,
+    checkboxProps,
   } = props;
 
   return (
@@ -23,7 +24,10 @@ function CustomSelect({ ...props }) {
       {...formControlProps}
       className={`${formControlProps.className} ${classes.formControl}`}
     >
-      <FormControlLabel control={<Checkbox checked={isChecked} value={value} />} label={label} />
+      <FormControlLabel
+        control={<Checkbox checked={isChecked} value={value} {...checkboxProps} />}
+        label={label}
+      />
       {error ? (
         <Clear className={`${classes.feedback} ${classes.labelRootError}`} />
       ) : success ? (

@@ -1,0 +1,73 @@
+import React, { Component } from 'react';
+import { Field } from 'redux-form';
+import { InputLabel } from '@material-ui/core';
+
+import { CustomInput } from '../../components';
+
+class Input extends Component {
+  renderField = field => {
+    const {
+      meta: { touched, error },
+    } = field;
+    return (
+      <div>
+        <CustomInput
+          classes={field.classes}
+          labelProps={field.labelProps}
+          error={touched && error}
+          success={touched && !error}
+          labelText={field.labelText}
+          value={field.value}
+          onChange={field.onChange}
+          placeholder={field.placeholder}
+          disabled={field.disabled}
+          type={field.type}
+          formControlProps={{
+            fullWidth: true,
+          }}
+          inputProps={{ ...field.input, ...field.inputProps }}
+        />
+        <InputLabel
+          style={{
+            color: '#cbcbcb',
+            fontSize: '11px',
+          }}
+        >
+          {field.helpText}
+        </InputLabel>
+      </div>
+    );
+  };
+
+  render() {
+    const {
+      name,
+      placeholder,
+      labelText,
+      validate,
+      value,
+      onChange,
+      disabled,
+      type,
+      helpText,
+      inputProps,
+    } = this.props;
+    return (
+      <Field
+        name={name}
+        component={this.renderField}
+        placeholder={placeholder}
+        labelText={labelText}
+        validate={validate}
+        value={value}
+        onChange={onChange}
+        disabled={disabled}
+        type={type}
+        helpText={helpText}
+        inputProps={inputProps}
+      />
+    );
+  }
+}
+
+export default Input;

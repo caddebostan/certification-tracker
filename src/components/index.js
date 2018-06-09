@@ -9,6 +9,13 @@ import StatsCard from './cards/statsCard';
 import TasksCard from './cards/tasksCard';
 
 // ##############################
+// // // Redux Form Components
+// #############################
+
+import ReduxFormInput from './reduxFormComponents/input';
+import ReduxFormSelect from './reduxFormComponents/select';
+
+// ##############################
 // // // CustomButtons
 // #############################
 
@@ -118,6 +125,8 @@ export {
   Quote,
   Muted,
   Primary,
+  ReduxFormInput,
+  ReduxFormSelect,
   Info,
   Success,
   Warning,

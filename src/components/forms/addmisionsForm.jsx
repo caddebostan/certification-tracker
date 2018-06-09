@@ -1,13 +1,10 @@
 import React from 'react';
+import { Grid, Typography } from '@material-ui/core';
+import { connect } from 'react-redux';
+import { reduxForm } from 'redux-form';
 
-import { Grid, InputLabel, Typography } from '@material-ui/core';
+import { ReduxFormInput, ReduxFormSelect, ItemGrid } from '../../components';
 
-import { CustomInput, ItemGrid, CustomSelect } from '../../components';
-
-const inputDescriptionStyle = {
-  color: '#cbcbcb',
-  fontSize: '11px',
-};
 // eslint-disable-next-line
 const selectData = [
   {
@@ -34,179 +31,87 @@ function AddmisionsForm({ ...props }) {
     <div>
       <Grid container>
         <ItemGrid xs={12} sm={12} md={6}>
-          <CustomInput
-            labelText="Firma Adı "
-            id="company-disabled"
-            formControlProps={{
-              fullWidth: true,
-            }}
-            // inputProps={{
-            //   disabled: true
-            // }}
+          <ReduxFormInput
+            name="firmaAdi"
+            labelText="Firma Adı"
+            helpText="(Varsa Bağlı olduğu Kuruluş) (Ticaret Sicil Gazetesi’ndeki)"
           />
-          <InputLabel style={inputDescriptionStyle}>
-            (Varsa Bağlı olduğu Kuruluş) (Ticaret Sicil Gazetesi’ndeki)
-          </InputLabel>
         </ItemGrid>
         <ItemGrid xs={12} sm={12} md={6}>
-          <CustomInput
+          <ReduxFormInput
+            name="firmaAdresi"
             labelText="Firma Merkez Adresi"
-            id="username"
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
-          <InputLabel style={inputDescriptionStyle}>(Ticaret Sicili Gazetesi’ndeki)</InputLabel>
-        </ItemGrid>
-      </Grid>
-
-      <Grid container>
-        <ItemGrid xs={12} sm={12} md={4}>
-          <CustomInput
-            labelText="Gerçekleştirilen Faaliyet"
-            id="postal-code"
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
-        </ItemGrid>
-        <ItemGrid xs={12} sm={12} md={4}>
-          <CustomInput
-            labelText="Yönetim Temsilcisi Adı Soyadı"
-            id="first-name"
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
-        </ItemGrid>
-        <ItemGrid xs={12} sm={12} md={4}>
-          <CustomInput
-            labelText="Firma Yetkilisi Adı/Soyadı"
-            id=""
-            formControlProps={{
-              fullWidth: true,
-            }}
+            helpText="(Ticaret Sicili Gazetesi’ndeki)"
           />
         </ItemGrid>
       </Grid>
 
       <Grid container>
         <ItemGrid xs={12} sm={12} md={4}>
-          <CustomInput
-            labelText="Telefon"
-            id="last-name"
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
+          <ReduxFormInput name="faaliyet" labelText="Gerçekleştirilen Faaliyet" />
         </ItemGrid>
         <ItemGrid xs={12} sm={12} md={4}>
-          <CustomInput
-            labelText="Faks"
-            id="city"
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
+          <ReduxFormInput name="temsilciAdi" labelText="Yönetim Temsilcisi Adı Soyadı" />
         </ItemGrid>
         <ItemGrid xs={12} sm={12} md={4}>
-          <CustomInput
-            labelText="Web Adresi / E-mail"
-            id="city"
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
+          <ReduxFormInput name="yetkiliAdi" labelText="Firma Yetkilisi Adı/Soyadı" />
+        </ItemGrid>
+      </Grid>
+
+      <Grid container>
+        <ItemGrid xs={12} sm={12} md={4}>
+          <ReduxFormInput name="telefon" labelText="Telefon" />
+        </ItemGrid>
+        <ItemGrid xs={12} sm={12} md={4}>
+          <ReduxFormInput name="faks" labelText="Faks" />
+        </ItemGrid>
+        <ItemGrid xs={12} sm={12} md={4}>
+          <ReduxFormInput name="webAdresi" labelText="Web Adresi / E-mail" />
         </ItemGrid>
       </Grid>
 
       <Grid container>
         <ItemGrid xs={12} sm={12} md={12}>
-          <CustomInput
+          <ReduxFormInput
+            name="adres"
             labelText="Adres"
-            id="country"
-            formControlProps={{
-              fullWidth: true,
-            }}
+            helpText="(Şube / Geçici Saha / Şantiye / Uygulama Adresi)"
           />
-          <InputLabel style={inputDescriptionStyle}>
-            (Şube / Geçici Saha / Şantiye / Uygulama Adresi)
-          </InputLabel>
         </ItemGrid>
       </Grid>
 
       <Grid container>
         <ItemGrid xs={12} sm={6} md={3}>
-          <CustomInput
-            labelText="Toplam Çalışan Sayısı"
-            id="city"
-            type="number"
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
+          <ReduxFormInput name="calisanSayisi" labelText="Toplam Çalışan Sayısı" type="number" />
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={3}>
-          <CustomInput
-            labelText="Yönetici Sayısı"
-            id="country"
-            type="number"
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
+          <ReduxFormInput name="yoneticiSayisi" labelText="Yönetici Sayısı" type="number" />
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={3}>
-          <CustomInput
-            labelText="Vardiya Sayısı"
-            id="postal-code"
-            type="number"
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
+          <ReduxFormInput name="vardiyaSayisi" labelText="Vardiya Sayısı" type="number" />
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={3}>
-          <CustomInput
+          <ReduxFormInput
+            name="vardiyaCalisanSayisi"
             labelText="Vardiya Çalışan Sayısı"
-            id="postal-code"
             type="number"
-            formControlProps={{
-              fullWidth: true,
-            }}
           />
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={4}>
-          <CustomInput
-            labelText="Vardiya Çalışan Sayısı"
-            id="postal-code"
-            type="number"
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
-        </ItemGrid>
-        <ItemGrid xs={12} sm={6} md={4}>
-          <CustomInput
+          <ReduxFormInput
+            name="uygulamaAlaniSayisi"
             labelText="Uygulama Alanı Sayısı"
-            id="postal-code"
             type="number"
-            formControlProps={{
-              fullWidth: true,
-            }}
+            helpText="(Şube / Geçici Saha / Şantiye)"
           />
-          <InputLabel style={inputDescriptionStyle}>(Şube / Geçici Saha / Şantiye)</InputLabel>
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={4}>
-          <CustomInput
+          <ReduxFormInput
+            name="uygulamaAlaniCalisanSayisi"
             labelText="Uygulama Alanı Çalışan Sayısı"
-            id="postal-code"
             type="number"
-            formControlProps={{
-              fullWidth: true,
-            }}
+            helpText="(Şube / Geçici Saha / Şantiye)"
           />
-          <InputLabel style={inputDescriptionStyle}>(Şube / Geçici Saha / Şantiye)</InputLabel>
         </ItemGrid>
       </Grid>
 
@@ -218,49 +123,19 @@ function AddmisionsForm({ ...props }) {
         </ItemGrid>
 
         <ItemGrid xs={12} sm={6} md={3}>
-          <CustomSelect
-            label="ISO 9001 - ISO 14001"
-            value="ISO 9001 ISO 14001"
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
+          <ReduxFormSelect label="ISO 9001 - ISO 14001" name="ISO9001ISO14001" />
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={3}>
-          <CustomSelect
-            label="OHSAS 18001 - ISO 22000"
-            value=""
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
+          <ReduxFormSelect label="OHSAS 18001 - ISO 22000" name="OHSAS18001ISO22000" />
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={3}>
-          <CustomSelect
-            label="SO 13485 - ISO 27001"
-            value=""
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
+          <ReduxFormSelect label="SO 13485 - ISO 27001" name="SO13485ISO27001" />
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={3}>
-          <CustomSelect
-            label=" ISO 10002 SA 8000"
-            value=""
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
+          <ReduxFormSelect label="ISO 10002 SA 8000" name="ISO10002SA8000" />
         </ItemGrid>
         <ItemGrid xs={12} sm={12} md={12}>
-          <CustomInput
-            labelText="Varsa diger talep edilen belgeler."
-            id="postal-code"
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
+          <ReduxFormInput name="digerBelgeler" labelText="Varsa diger talep edilen belgeler" />
         </ItemGrid>
       </Grid>
 
@@ -270,57 +145,27 @@ function AddmisionsForm({ ...props }) {
         </ItemGrid>
 
         <ItemGrid xs={12} sm={6} md={4}>
-          <CustomSelect
+          <ReduxFormSelect
             label="İçtetkik YGG toplantı uygulamaları entegre"
-            value="firma-option-1"
-            formControlProps={{
-              fullWidth: true,
-            }}
+            name="yggToplantiUygulamari"
           />
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={4}>
-          <CustomSelect
-            label="Sistem Yönetim Temsilcisi Ortak "
-            value=""
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
+          <ReduxFormSelect label="Sistem Yönetim Temsilcisi Ortak" name="sistemYonetimTemsilcisi" />
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={4}>
-          <CustomSelect
-            label="El Kitapları Entegre"
-            value=""
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
+          <ReduxFormSelect label="El Kitapları Entegre" name="elKitaplariEntegre" />
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={4}>
-          <CustomSelect
-            label="Sistem Prosesleri entegre"
-            value=""
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
+          <ReduxFormSelect label="Sistem Prosesleri entegre" name="sistemProsesleriEntegre" />
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={4}>
-          <CustomSelect
-            label="İş Talimatları Entegre"
-            value=""
-            formControlProps={{
-              fullWidth: true,
-            }}
-          />
+          <ReduxFormSelect label="İş Talimatları Entegre" name="isTalimatlariEntegre" />
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={4}>
-          <CustomSelect
-            label="İyileştirme Dokümanları Entegre "
-            value=""
-            formControlProps={{
-              fullWidth: true,
-            }}
+          <ReduxFormSelect
+            label="İyileştirme Dokümanları Entegre"
+            name="iyilestirmeDokumanlariEntegre"
           />
         </ItemGrid>
       </Grid>
@@ -330,112 +175,80 @@ function AddmisionsForm({ ...props }) {
           <Typography color="textSecondary">Firmanın Sistem Entegreasyon Düzeyi</Typography>
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={6}>
-          <CustomInput
+          <ReduxFormInput
+            name="firmaDanisman"
             labelText="Firma veya Danışman"
-            id=""
-            formControlProps={{
-              fullWidth: true,
-            }}
+            helpText="(Danışmanlık Hizmeti Alındıysa)"
           />
-          <InputLabel style={inputDescriptionStyle}>(Danışmanlık Hizmeti Alındıysa)</InputLabel>
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={12}>
-          <CustomSelect
-            label="Ön Tetkik Talep Ediliyor"
-            value="1"
-            formControlProps={{
-              fullWidth: false,
-            }}
-          />
+          <ReduxFormSelect label="Ön Tetkik Talep Ediliyor" name="onTetkikTalep" />
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={4}>
-          <CustomInput
+          <ReduxFormInput
+            name="onTetkikTarihi"
             labelText="Talep edilen Ön Tetkik Tarihi"
-            value="2"
             type="number"
-            formControlProps={{
-              fullWidth: true,
-            }}
           />
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={4}>
-          <CustomInput
-            labelText="Talep Edilen 1. Aşama Tetkik Tarihi:"
-            value="3"
+          <ReduxFormInput
+            name="1AsamaTetkikTarihi"
+            labelText="Talep Edilen 1. Aşama Tetkik Tarihi"
             type="number"
-            formControlProps={{
-              fullWidth: true,
-            }}
+            helpText="(Talep Ediliyorsa)"
           />
-          <InputLabel style={inputDescriptionStyle}>(Talep Ediliyorsa)</InputLabel>
         </ItemGrid>
         <ItemGrid xs={12} sm={6} md={4}>
-          <CustomInput
-            labelText="Talep Edilen 2. Aşama Tetkik Tarihi:"
-            value="5"
+          <ReduxFormInput
+            name="2AsamaTetkikTarihi"
+            labelText="Talep Edilen 2. Aşama Tetkik Tarihi"
             type="number"
-            formControlProps={{
-              fullWidth: true,
-            }}
+            helpText="(Talep Ediliyorsa)"
           />
-          <InputLabel style={inputDescriptionStyle}>(Talep Ediliyorsa)</InputLabel>
         </ItemGrid>
       </Grid>
       <Grid container>
         <ItemGrid xs={12} sm={12} md={6}>
-          <CustomInput
+          <ReduxFormInput
+            name="standartHaricTutulmalar"
             labelText="Standart Hariç Tutmalar Var mı? Hangi Maddeler?"
-            id="postal-code"
-            formControlProps={{
-              fullWidth: true,
-            }}
+            helpText="Maddeleri Yaziniz."
             inputProps={{
               multiline: true,
               rows: 5,
             }}
           />
-          <InputLabel style={inputDescriptionStyle}>Maddeleri Yaziniz.</InputLabel>
         </ItemGrid>
         <ItemGrid xs={12} sm={12} md={6}>
-          <CustomInput
+          <ReduxFormInput
+            name="ruhsatBelgeleri"
             labelText="Resmi Kuruluşlardan Almış Olduğunuz İzin/ruhsat Belgeleri Varsa Belirtiniz."
-            id="postal-code"
+            helpText="İlgili Yasal Şartlar"
             inputProps={{
               multiline: true,
               rows: 5,
             }}
-            formControlProps={{
-              fullWidth: true,
-            }}
           />
-          <InputLabel style={inputDescriptionStyle}>İlgili Yasal Şartlar</InputLabel>
         </ItemGrid>
       </Grid>
 
       <Grid container>
         <ItemGrid xs={12} sm={12} md={6}>
-          <CustomInput
+          <ReduxFormInput
+            name="yonetimSistemiHazirliklari"
             labelText="Talep Edilen Yönetim Sistemi Hazırlıkları"
-            id="postal-code"
-            formControlProps={{
-              fullWidth: true,
-            }}
+            helpText="(El kitabı, YGG, içtetkik tarihleri vb.)"
             inputProps={{
               multiline: true,
               rows: 5,
             }}
           />
-          <InputLabel style={inputDescriptionStyle}>
-            (El kitabı, YGG, içtetkik tarihleri vb.)
-          </InputLabel>
         </ItemGrid>
         <ItemGrid xs={12} sm={12} md={6}>
-          <CustomInput
+          <ReduxFormInput
+            name="faaliyetKapsami"
             labelText="Belgelendirme Faaliyet Kapsamı"
-            id="postal-code"
-            formControlProps={{
-              fullWidth: true,
-            }}
             inputProps={{
               multiline: true,
               rows: 5,
@@ -446,28 +259,20 @@ function AddmisionsForm({ ...props }) {
 
       <Grid container>
         <ItemGrid xs={12} sm={12} md={6}>
-          <CustomInput
+          <ReduxFormInput
+            name="faaliyetAlanlari"
             labelText="Belgelendirme Kapsamındaki faaliyet alanları, departmanlar, süreçler, Ana Ürünler/hizmetler, Ana Hammaddeler"
-            id="postal-code"
-            formControlProps={{
-              fullWidth: true,
-            }}
+            helpText="(El kitabı, YGG, içtetkik tarihleri vb.)"
             inputProps={{
               multiline: true,
               rows: 5,
             }}
           />
-          <InputLabel style={inputDescriptionStyle}>
-            (El kitabı, YGG, içtetkik tarihleri vb.)
-          </InputLabel>
         </ItemGrid>
         <ItemGrid xs={12} sm={12} md={6}>
-          <CustomInput
+          <ReduxFormInput
+            name="disKaynakliProsesler"
             labelText="Varsa, Dış Kaynaklı Prosesler"
-            id="postal-code"
-            formControlProps={{
-              fullWidth: true,
-            }}
             inputProps={{
               multiline: true,
               rows: 5,
@@ -478,25 +283,9 @@ function AddmisionsForm({ ...props }) {
 
       <Grid container>
         <ItemGrid xs={12} sm={12} md={12}>
-          <CustomInput
-            labelText="Belgelendirme Kapsamındaki faaliyet alanları, departmanlar, süreçler, Ana Ürünler/hizmetler, Ana Hammaddeler"
-            id="postal-code"
-            formControlProps={{
-              fullWidth: true,
-            }}
-            inputProps={{
-              multiline: true,
-              rows: 5,
-            }}
-          />
-        </ItemGrid>
-        <ItemGrid xs={12} sm={12} md={12}>
-          <CustomInput
+          <ReduxFormInput
+            name="not"
             labelText="Not"
-            id="about-me"
-            formControlProps={{
-              fullWidth: true,
-            }}
             inputProps={{
               multiline: true,
               rows: 5,
@@ -508,4 +297,6 @@ function AddmisionsForm({ ...props }) {
   );
 }
 
-export default AddmisionsForm;
+export default reduxForm({
+  form: 'AddmisionsForm',
+})(connect()(AddmisionsForm));
