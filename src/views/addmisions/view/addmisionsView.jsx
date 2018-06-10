@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid } from "@material-ui/core";
+import { Grid } from '@material-ui/core';
 
 // Constants
 
@@ -19,7 +19,7 @@ class AddmisionsView extends Component {
       tableData: [],
       tableHead: [],
       selectedRowItem: null,
-      cardSubtitle: "Basvuruyu sec ve onayla.",
+      cardSubtitle: 'Basvuruyu sec ve onayla.',
     };
   }
 
@@ -44,32 +44,31 @@ class AddmisionsView extends Component {
   _handleOnRowClick = id => {
     this.setState({
       selectedRowItem: id,
-      cardSubtitle: "Duzenle ve onayla.",
-    })
+      cardSubtitle: 'Duzenle ve onayla.',
+    });
   };
 
   _handleBackButton = () => {
     this.setState({
       selectedRowItem: null,
-    })
-  }
+    });
+  };
 
   _getContent = () => {
     const { selectedRowItem, tableData, tableHead, tableHeaderColor } = this.state;
 
-    if (!selectedRowItem){
+    if (!selectedRowItem) {
       return (
         <Table
-          handleOnRowClick={(e) => this._handleOnRowClick(e)}
+          handleOnRowClick={e => this._handleOnRowClick(e)}
           tableHeaderColor={tableHeaderColor}
           tableHead={tableHead}
           tableData={tableData}
         />
       );
-    } else {
-      return (<AddmisionsForm selectedItemID={selectedRowItem}/> );
     }
-  }
+    return <AddmisionsForm selectedItemID={selectedRowItem} />;
+  };
 
   _getFooter = () => {
     const { selectedRowItem } = this.state;
@@ -81,28 +80,26 @@ class AddmisionsView extends Component {
           </Button>
           <Button color="rose">Kaydet ve Onayla</Button>
         </div>
-        
       );
-    } else {
-      return null;
     }
-  }
+    return null;
+  };
 
   render() {
     const { cardSubtitle } = this.state;
 
     return (
       <Grid container>
-      <ItemGrid xs={12} sm={12} md={12}>
-        <RegularCard
-          plainCard={false}
-          cardTitle="Basvurular"
-          cardSubtitle={cardSubtitle}
-          content={this._getContent()}
-          footer={this._getFooter()}
-        />
-      </ItemGrid>
-    </Grid>
+        <ItemGrid xs={12} sm={12} md={12}>
+          <RegularCard
+            plainCard={false}
+            cardTitle="Basvurular"
+            cardSubtitle={cardSubtitle}
+            content={this._getContent()}
+            footer={this._getFooter()}
+          />
+        </ItemGrid>
+      </Grid>
     );
   }
 }

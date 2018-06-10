@@ -21,7 +21,8 @@ const Sidebar = ({ ...props }) => {
   function activeRoute(routeName) {
     return props.location.pathname.indexOf(routeName) > -1;
   }
-  const { classes, color, logo, image, logoText, routes } = props;
+  // eslint-disable-next-line
+  const { classes, color, logo, image, logoText, routes, open, handleDrawerToggle } = props;
   const links = (
     <List className={classes.list}>
       {routes.map((prop, key) => {
@@ -65,11 +66,11 @@ const Sidebar = ({ ...props }) => {
         <Drawer
           variant="temporary"
           anchor="right"
-          open={props.open}
+          open={open}
           classes={{
             paper: classes.drawerPaper,
           }}
-          onClose={props.handleDrawerToggle}
+          onClose={handleDrawerToggle}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
@@ -106,6 +107,7 @@ const Sidebar = ({ ...props }) => {
 
 Sidebar.propTypes = {
   classes: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
 };
 
 export default withStyles(sidebarStyle)(Sidebar);

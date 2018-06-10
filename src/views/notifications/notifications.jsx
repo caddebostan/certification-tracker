@@ -1,6 +1,6 @@
-import React from "react";
-import { Grid } from "@material-ui/core";
-import { AddAlert } from "@material-ui/icons";
+import React from 'react';
+import { Grid } from '@material-ui/core';
+import { AddAlert } from '@material-ui/icons';
 
 import {
   RegularCard,
@@ -10,8 +10,8 @@ import {
   Button,
   SnackbarContent,
   Snackbar,
-  ItemGrid
-} from "../../components";
+  ItemGrid,
+} from '../../components';
 
 class Notifications extends React.Component {
   constructor(props) {
@@ -22,20 +22,17 @@ class Notifications extends React.Component {
       tr: false,
       bl: false,
       bc: false,
-      br: false
+      br: false,
     };
   }
   showNotification(place) {
-    var x = [];
+    const x = [];
     x[place] = true;
     this.setState(x);
-    setTimeout(
-      function() {
-        x[place] = false;
-        this.setState(x);
-      }.bind(this),
-      6000
-    );
+    setTimeout(() => {
+      x[place] = false;
+      this.setState(x);
+    }, 6000);
   }
   render() {
     return (
@@ -43,14 +40,14 @@ class Notifications extends React.Component {
         cardTitle="Notifications"
         cardSubtitle={
           <P>
-            Handcrafted by our friends from{" "}
+            Handcrafted by our friends from{' '}
             <A target="_blank" href="https://material-ui-next.com/">
               Material UI
-            </A>{" "}
-            and styled by{" "}
+            </A>{' '}
+            and styled by{' '}
             <A target="_blank" href="#">
               Certification Tracker
-            </A>. Please checkout the{" "}
+            </A>. Please checkout the{' '}
             <A href="#pablo" target="_blank">
               full documentation
             </A>.
@@ -62,13 +59,10 @@ class Notifications extends React.Component {
               <ItemGrid xs={12} sm={12} md={6}>
                 <h5>Notifications Style</h5>
                 <br />
-                <SnackbarContent message={"This is a plain notification"} />
+                <SnackbarContent message="This is a plain notification" />
+                <SnackbarContent message="This is a notification with close button." close />
                 <SnackbarContent
-                  message={"This is a notification with close button."}
-                  close
-                />
-                <SnackbarContent
-                  message={"This is a notification with close button and icon."}
+                  message="This is a notification with close button and icon."
                   close
                   icon={AddAlert}
                 />
@@ -84,37 +78,27 @@ class Notifications extends React.Component {
                 <h5>Notifications States</h5>
                 <br />
                 <SnackbarContent
-                  message={
-                    'INFO - This is a regular notification made with color="info"'
-                  }
+                  message={'INFO - This is a regular notification made with color="info"'}
                   close
                   color="info"
                 />
                 <SnackbarContent
-                  message={
-                    'SUCCESS - This is a regular notification made with color="success"'
-                  }
+                  message={'SUCCESS - This is a regular notification made with color="success"'}
                   close
                   color="success"
                 />
                 <SnackbarContent
-                  message={
-                    'WARNING - This is a regular notification made with color="warning"'
-                  }
+                  message={'WARNING - This is a regular notification made with color="warning"'}
                   close
                   color="warning"
                 />
                 <SnackbarContent
-                  message={
-                    'DANGER - This is a regular notification made with color="danger"'
-                  }
+                  message={'DANGER - This is a regular notification made with color="danger"'}
                   close
                   color="danger"
                 />
                 <SnackbarContent
-                  message={
-                    'PRIMARY - This is a regular notification made with color="primary"'
-                  }
+                  message={'PRIMARY - This is a regular notification made with color="primary"'}
                   close
                   color="primary"
                 />
@@ -123,7 +107,7 @@ class Notifications extends React.Component {
             <br />
             <br />
             <Grid container justify="center">
-              <ItemGrid xs={12} sm={12} md={6} style={{ textAlign: "center" }}>
+              <ItemGrid xs={12} sm={12} md={6} style={{ textAlign: 'center' }}>
                 <h5>
                   Notifications Places
                   <Small>Click to view notifications</Small>
@@ -134,11 +118,7 @@ class Notifications extends React.Component {
               <ItemGrid xs={12} sm={12} md={10} lg={8}>
                 <Grid container>
                   <ItemGrid xs={12} sm={12} md={4}>
-                    <Button
-                      fullWidth
-                      color="primary"
-                      onClick={() => this.showNotification("tl")}
-                    >
+                    <Button fullWidth color="primary" onClick={() => this.showNotification('tl')}>
                       Top Left
                     </Button>
                     <Snackbar
@@ -152,11 +132,7 @@ class Notifications extends React.Component {
                     />
                   </ItemGrid>
                   <ItemGrid xs={12} sm={12} md={4}>
-                    <Button
-                      fullWidth
-                      color="primary"
-                      onClick={() => this.showNotification("tc")}
-                    >
+                    <Button fullWidth color="primary" onClick={() => this.showNotification('tc')}>
                       Top Center
                     </Button>
                     <Snackbar
@@ -170,11 +146,7 @@ class Notifications extends React.Component {
                     />
                   </ItemGrid>
                   <ItemGrid xs={12} sm={12} md={4}>
-                    <Button
-                      fullWidth
-                      color="primary"
-                      onClick={() => this.showNotification("tr")}
-                    >
+                    <Button fullWidth color="primary" onClick={() => this.showNotification('tr')}>
                       Top Right
                     </Button>
                     <Snackbar
@@ -190,15 +162,11 @@ class Notifications extends React.Component {
                 </Grid>
               </ItemGrid>
             </Grid>
-            <Grid container justify={"center"}>
+            <Grid container justify="center">
               <ItemGrid xs={12} sm={12} md={10} lg={8}>
                 <Grid container>
                   <ItemGrid xs={12} sm={12} md={4}>
-                    <Button
-                      fullWidth
-                      color="primary"
-                      onClick={() => this.showNotification("bl")}
-                    >
+                    <Button fullWidth color="primary" onClick={() => this.showNotification('bl')}>
                       Bottom Left
                     </Button>
                     <Snackbar
@@ -212,11 +180,7 @@ class Notifications extends React.Component {
                     />
                   </ItemGrid>
                   <ItemGrid xs={12} sm={12} md={4}>
-                    <Button
-                      fullWidth
-                      color="primary"
-                      onClick={() => this.showNotification("bc")}
-                    >
+                    <Button fullWidth color="primary" onClick={() => this.showNotification('bc')}>
                       Bottom Center
                     </Button>
                     <Snackbar
@@ -230,11 +194,7 @@ class Notifications extends React.Component {
                     />
                   </ItemGrid>
                   <ItemGrid xs={12} sm={12} md={4}>
-                    <Button
-                      fullWidth
-                      color="primary"
-                      onClick={() => this.showNotification("br")}
-                    >
+                    <Button fullWidth color="primary" onClick={() => this.showNotification('br')}>
                       Bottom Right
                     </Button>
                     <Snackbar

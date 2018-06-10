@@ -1,11 +1,3 @@
-import DashboardPage from "../views/dashboard/dashboard";
-import UserProfile from "../views/userProfile/userProfile";
-import Addmisions from "../views/addmisions/view/addmisionsView";
-import Typography from "../views/typography/typography";
-import Icons from "../views/icons/icons";
-import Maps from "../views/maps/maps";
-import NotificationsPage from "../views/notifications/notifications";
-
 import {
   Dashboard,
   List,
@@ -14,67 +6,75 @@ import {
   Receipt,
   InsertDriveFile,
   Assignment,
-  Description
-} from "@material-ui/icons";
+  Description,
+} from '@material-ui/icons';
+
+import DashboardPage from '../views/dashboard/dashboard';
+import UserProfile from '../views/userProfile/userProfile';
+import Addmisions from '../views/addmisions/view/addmisionsView';
+import Typography from '../views/typography/typography';
+import Icons from '../views/icons/icons';
+import Maps from '../views/maps/maps';
+import NotificationsPage from '../views/notifications/notifications';
 
 const dashboardRoutes = [
   {
-    path: "/dashboard",
-    sidebarName: "Özet",
-    navbarName: "Özet",
+    path: '/dashboard',
+    sidebarName: 'Özet',
+    navbarName: 'Özet',
     icon: Dashboard,
-    component: DashboardPage
+    component: DashboardPage,
   },
   {
-    path: "/basvurular",
-    sidebarName: "Basvurular",
-    navbarName: "Basvurular",
+    path: '/basvurular',
+    sidebarName: 'Basvurular',
+    navbarName: 'Basvurular',
     icon: List,
-    component: Addmisions
+    component: Addmisions,
   },
   {
-    path: "/planlama",
-    sidebarName: "Planlama",
-    navbarName: "Planlama",
+    path: '/planlama',
+    sidebarName: 'Planlama',
+    navbarName: 'Planlama',
     icon: Assignment,
-    component: UserProfile
+    component: UserProfile,
   },
   {
-    path: "/tetkikler",
-    sidebarName: "Tetkikler",
-    navbarName: "Tetkikler",
+    path: '/tetkikler',
+    sidebarName: 'Tetkikler',
+    navbarName: 'Tetkikler',
     icon: LibraryBooks,
-    component: Typography
+    component: Typography,
   },
   {
-    path: "/belge",
-    sidebarName: "Belge",
-    navbarName: "Belge",
+    path: '/belge',
+    sidebarName: 'Belge',
+    navbarName: 'Belge',
     icon: Description,
-    component: Icons
+    component: Icons,
   },
   {
-    path: "/ucret",
-    sidebarName: "Ucret Takip",
-    navbarName: "Ucret Takip",
+    path: '/ucret',
+    sidebarName: 'Ucret Takip',
+    navbarName: 'Ucret Takip',
     icon: Receipt,
-    component: Maps
+    component: Maps,
   },
   {
-    path: "/denetci",
-    sidebarName: "Denetci Performans",
-    navbarName: "Denetci Performans",
+    path: '/denetci',
+    sidebarName: 'Denetci Performans',
+    navbarName: 'Denetci Performans',
     icon: SupervisorAccount,
-    component: NotificationsPage
+    component: NotificationsPage,
   },
   {
-    path: "/dokumanlar",
-    sidebarName: "Dokumanlar",
-    navbarName: "Dokumanlar",
+    path: '/dokumanlar',
+    sidebarName: 'Dokumanlar',
+    navbarName: 'Dokumanlar',
     icon: InsertDriveFile,
-    component: NotificationsPage
+    component: NotificationsPage,
   },
-  { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
+  { redirect: true, path: '/', to: '/dashboard', navbarName: 'Redirect' },
 ];
 
 export default dashboardRoutes;

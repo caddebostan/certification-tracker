@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 import {
   withStyles,
   Card,
   CardHeader,
   CardContent,
   CardActions,
-  Typography
-} from "@material-ui/core";
-import PropTypes from "prop-types";
+  Typography,
+} from '@material-ui/core';
+import PropTypes from 'prop-types';
 
-import profileCardStyle from "../../assets/jss/material-dashboard-react/profileCardStyle";
+import profileCardStyle from '../../assets/jss/material-dashboard-react/profileCardStyle';
 
 function ProfileCard({ ...props }) {
   const { classes, subtitle, title, description, footer, avatar } = props;
@@ -18,7 +18,7 @@ function ProfileCard({ ...props }) {
       <CardHeader
         classes={{
           root: classes.cardHeader,
-          avatar: classes.cardAvatar
+          avatar: classes.cardAvatar,
         }}
         avatar={<img src={avatar} alt="..." className={classes.img} />}
       />
@@ -39,9 +39,7 @@ function ProfileCard({ ...props }) {
           </Typography>
         ) : null}
       </CardContent>
-      <CardActions className={classes.textAlign + " " + classes.cardActions}>
-        {footer}
-      </CardActions>
+      <CardActions className={`${classes.textAlign} ${classes.cardActions}`}>{footer}</CardActions>
     </Card>
   );
 }
@@ -52,7 +50,15 @@ ProfileCard.propTypes = {
   subtitle: PropTypes.node,
   description: PropTypes.node,
   footer: PropTypes.node,
-  avatar: PropTypes.string
+  avatar: PropTypes.string,
+};
+
+ProfileCard.defaultProps = {
+  title: '',
+  subtitle: '',
+  description: '',
+  footer: '',
+  avatar: '',
 };
 
 export default withStyles(profileCardStyle)(ProfileCard);

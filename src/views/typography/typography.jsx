@@ -1,5 +1,6 @@
-import React from "react";
-import { withStyles } from "@material-ui/core";
+import React from 'react';
+import { withStyles } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
 import {
   P,
@@ -11,34 +12,34 @@ import {
   Warning,
   Danger,
   Small,
-  RegularCard
-} from "../../components";
+  RegularCard,
+} from '../../components';
 
 const style = {
   typo: {
-    paddingLeft: "25%",
-    marginBottom: "40px",
-    position: "relative"
+    paddingLeft: '25%',
+    marginBottom: '40px',
+    position: 'relative',
   },
   note: {
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-    bottom: "10px",
-    color: "#c0c1c2",
-    display: "block",
-    fontWeight: "400",
-    fontSize: "13px",
-    lineHeight: "13px",
-    left: "0",
-    marginLeft: "20px",
-    position: "absolute",
-    width: "260px"
-  }
+    bottom: '10px',
+    color: '#c0c1c2',
+    display: 'block',
+    fontWeight: '400',
+    fontSize: '13px',
+    lineHeight: '13px',
+    left: '0',
+    marginLeft: '20px',
+    position: 'absolute',
+    width: '260px',
+  },
 };
 function TypographyPage({ ...props }) {
   return (
     <RegularCard
-      cardTitle={"Material Dashboard Heading"}
-      cardSubtitle={"Created using Roboto Font Family"}
+      cardTitle="Material Dashboard Heading"
+      cardSubtitle="Created using Roboto Font Family"
       content={
         <div>
           <div className={props.classes.typo}>
@@ -68,10 +69,9 @@ function TypographyPage({ ...props }) {
           <div className={props.classes.typo}>
             <div className={props.classes.note}>Paragraph</div>
             <P>
-              I will be the leader of a company that ends up being worth
-              billions of dollars, because I got the answers. I understand
-              culture. I am the nucleus. I think that’s a responsibility that I
-              have, to push possibilities, to show people, this is the level
+              I will be the leader of a company that ends up being worth billions of dollars,
+              because I got the answers. I understand culture. I am the nucleus. I think that’s a
+              responsibility that I have, to push possibilities, to show people, this is the level
               that things could be at.
             </P>
           </div>
@@ -85,50 +85,50 @@ function TypographyPage({ ...props }) {
           <div className={props.classes.typo}>
             <div className={props.classes.note}>Muted Text</div>
             <Muted>
-              I will be the leader of a company that ends up being worth
-              billions of dollars, because I got the answers...
+              I will be the leader of a company that ends up being worth billions of dollars,
+              because I got the answers...
             </Muted>
           </div>
           <div className={props.classes.typo}>
             <div className={props.classes.note}>Primary Text</div>
             <Primary>
-              I will be the leader of a company that ends up being worth
-              billions of dollars, because I got the answers...
+              I will be the leader of a company that ends up being worth billions of dollars,
+              because I got the answers...
             </Primary>
           </div>
           <div className={props.classes.typo}>
             <div className={props.classes.note}>Info Text</div>
             <Info>
-              I will be the leader of a company that ends up being worth
-              billions of dollars, because I got the answers...
+              I will be the leader of a company that ends up being worth billions of dollars,
+              because I got the answers...
             </Info>
           </div>
           <div className={props.classes.typo}>
             <div className={props.classes.note}>Success Text</div>
             <Success>
-              I will be the leader of a company that ends up being worth
-              billions of dollars, because I got the answers...
+              I will be the leader of a company that ends up being worth billions of dollars,
+              because I got the answers...
             </Success>
           </div>
           <div className={props.classes.typo}>
             <div className={props.classes.note}>Warning Text</div>
             <Warning>
-              I will be the leader of a company that ends up being worth
-              billions of dollars, because I got the answers...
+              I will be the leader of a company that ends up being worth billions of dollars,
+              because I got the answers...
             </Warning>
           </div>
           <div className={props.classes.typo}>
             <div className={props.classes.note}>Danger Text</div>
             <Danger>
-              I will be the leader of a company that ends up being worth
-              billions of dollars, because I got the answers...
+              I will be the leader of a company that ends up being worth billions of dollars,
+              because I got the answers...
             </Danger>
           </div>
           <div className={props.classes.typo}>
             <div className={props.classes.note}>Small Tag</div>
             <h2>
               Header with small subtitle<br />
-              <Small>Use "Small" tag for the headers</Small>
+              <Small>Use `Small` tag for the headers</Small>
             </h2>
           </div>
         </div>
@@ -136,5 +136,9 @@ function TypographyPage({ ...props }) {
     />
   );
 }
+
+TypographyPage.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
 
 export default withStyles(style)(TypographyPage);

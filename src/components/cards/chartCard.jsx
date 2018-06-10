@@ -1,33 +1,22 @@
-import React from "react";
+import React from 'react';
 import {
   withStyles,
   Card,
   CardContent,
   CardHeader,
   CardActions,
-  Typography
-} from "@material-ui/core";
-import PropTypes from "prop-types";
+  Typography,
+} from '@material-ui/core';
+import PropTypes from 'prop-types';
 
-import chartCardStyle from "../../assets/jss/material-dashboard-react/chartCardStyle";
+import chartCardStyle from '../../assets/jss/material-dashboard-react/chartCardStyle';
 
 function ChartCard({ ...props }) {
-  const {
-    classes,
-    chartColor,
-    statIconColor,
-    chart,
-    title,
-    text,
-    statLink,
-    statText
-  } = props;
+  const { classes, chartColor, statIconColor, chart, title, text, statLink, statText } = props;
   return (
     <Card className={classes.card}>
       <CardHeader
-        className={
-          classes.cardHeader + " " + classes[chartColor + "CardHeader"]
-        }
+        className={`${classes.cardHeader} ${classes[`${chartColor}CardHeader`]}`}
         subheader={chart}
       />
       <CardContent className={classes.cardContent}>
@@ -41,12 +30,8 @@ function ChartCard({ ...props }) {
       <CardActions className={classes.cardActions}>
         <div className={classes.cardStats}>
           <props.statIcon
-            className={
-              classes.cardStatsIcon +
-              " " +
-              classes[statIconColor + "CardStatsIcon"]
-            }
-          />{" "}
+            className={`${classes.cardStatsIcon} ${classes[`${statIconColor}CardStatsIcon`]}`}
+          />{' '}
           {statLink !== undefined ? (
             <a href={statLink.href} className={classes.cardStatsLink}>
               {statLink.text}
@@ -61,8 +46,8 @@ function ChartCard({ ...props }) {
 }
 
 ChartCard.defaultProps = {
-  statIconColor: "gray",
-  chartColor: "purple"
+  statIconColor: 'gray',
+  chartColor: 'purple',
 };
 
 ChartCard.propTypes = {
@@ -72,17 +57,23 @@ ChartCard.propTypes = {
   text: PropTypes.node,
   statIcon: PropTypes.func.isRequired,
   statIconColor: PropTypes.oneOf([
-    "warning",
-    "primary",
-    "danger",
-    "success",
-    "info",
-    "rose",
-    "gray"
+    'warning',
+    'primary',
+    'danger',
+    'success',
+    'info',
+    'rose',
+    'gray',
   ]),
-  chartColor: PropTypes.oneOf(["orange", "green", "red", "blue", "purple"]),
+  chartColor: PropTypes.oneOf(['orange', 'green', 'red', 'blue', 'purple']),
   statLink: PropTypes.object,
-  statText: PropTypes.node
+  statText: PropTypes.node,
 };
 
+ChartCard.defaultProps = {
+  title: '',
+  text: '',
+  statLink: {},
+  statText: '',
+};
 export default withStyles(chartCardStyle)(ChartCard);

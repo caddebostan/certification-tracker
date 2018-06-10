@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   withStyles,
   Checkbox,
@@ -7,17 +7,17 @@ import {
   TableBody,
   TableCell,
   TableRow,
-  Tooltip
-} from "@material-ui/core";
-import { Edit, Close, Check } from "@material-ui/icons";
+  Tooltip,
+} from '@material-ui/core';
+import { Edit, Close, Check } from '@material-ui/icons';
 
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-import tasksStyle from "../../assets/jss/material-dashboard-react/tasksStyle";
+import tasksStyle from '../../assets/jss/material-dashboard-react/tasksStyle';
 
 class Tasks extends React.Component {
   state = {
-    checked: this.props.checkedIndexes
+    checked: this.props.checkedIndexes,
   };
   handleToggle = value => () => {
     const { checked } = this.state;
@@ -31,7 +31,7 @@ class Tasks extends React.Component {
     }
 
     this.setState({
-      checked: newChecked
+      checked: newChecked,
     });
   };
   render() {
@@ -49,13 +49,11 @@ class Tasks extends React.Component {
                   checkedIcon={<Check className={classes.checkedIcon} />}
                   icon={<Check className={classes.uncheckedIcon} />}
                   classes={{
-                    checked: classes.checked
+                    checked: classes.checked,
                   }}
                 />
               </TableCell>
-              <TableCell className={classes.tableCell}>
-                {tasks[value]}
-              </TableCell>
+              <TableCell className={classes.tableCell}>{tasks[value]}</TableCell>
               <TableCell className={classes.tableActions}>
                 <Tooltip
                   id="tooltip-top"
@@ -63,15 +61,8 @@ class Tasks extends React.Component {
                   placement="top"
                   classes={{ tooltip: classes.tooltip }}
                 >
-                  <IconButton
-                    aria-label="Edit"
-                    className={classes.tableActionButton}
-                  >
-                    <Edit
-                      className={
-                        classes.tableActionButtonIcon + " " + classes.edit
-                      }
-                    />
+                  <IconButton aria-label="Edit" className={classes.tableActionButton}>
+                    <Edit className={`${classes.tableActionButtonIcon} ${classes.edit}`} />
                   </IconButton>
                 </Tooltip>
                 <Tooltip
@@ -80,15 +71,8 @@ class Tasks extends React.Component {
                   placement="top"
                   classes={{ tooltip: classes.tooltip }}
                 >
-                  <IconButton
-                    aria-label="Close"
-                    className={classes.tableActionButton}
-                  >
-                    <Close
-                      className={
-                        classes.tableActionButtonIcon + " " + classes.close
-                      }
-                    />
+                  <IconButton aria-label="Close" className={classes.tableActionButton}>
+                    <Close className={`${classes.tableActionButtonIcon} ${classes.close}`} />
                   </IconButton>
                 </Tooltip>
               </TableCell>
@@ -103,7 +87,14 @@ class Tasks extends React.Component {
 Tasks.propTypes = {
   classes: PropTypes.object.isRequired,
   tasksIndexes: PropTypes.arrayOf(PropTypes.number),
-  tasks: PropTypes.arrayOf(PropTypes.node)
+  checkedIndexes: PropTypes.arrayOf(PropTypes.number),
+  tasks: PropTypes.arrayOf(PropTypes.node),
+};
+
+Tasks.defaultProps = {
+  tasksIndexes: [],
+  checkedIndexes: [],
+  tasks: [],
 };
 
 export default withStyles(tasksStyle)(Tasks);

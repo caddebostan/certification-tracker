@@ -1,10 +1,11 @@
-import React from "react";
-import { withStyles, Grid } from "@material-ui/core";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { withStyles, Grid } from '@material-ui/core';
 
 const style = {
   grid: {
-    padding: "0 15px !important"
-  }
+    padding: '0 15px !important',
+  },
 };
 
 function ItemGrid({ ...props }) {
@@ -15,5 +16,10 @@ function ItemGrid({ ...props }) {
     </Grid>
   );
 }
+
+ItemGrid.propTypes = {
+  classes: PropTypes.object.isRequired,
+  children: PropTypes.node.isRequired,
+};
 
 export default withStyles(style)(ItemGrid);

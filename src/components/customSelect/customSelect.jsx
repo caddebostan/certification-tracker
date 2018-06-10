@@ -1,18 +1,15 @@
 import React from 'react';
 import { withStyles, FormControl, Checkbox, FormControlLabel } from '@material-ui/core';
 import { Clear, Check } from '@material-ui/icons';
+import PropTypes from 'prop-types';
 import customSelectStyle from '../../assets/jss/material-dashboard-react/customInputStyle';
 
 function CustomSelect({ ...props }) {
-  /* eslint-disable */
   const {
     classes,
     formControlProps,
-    labelText,
-    id,
     error,
     success,
-    helperText,
     isChecked,
     value,
     label,
@@ -36,6 +33,26 @@ function CustomSelect({ ...props }) {
     </FormControl>
   );
 }
-/* eslint-enable */
+
+CustomSelect.propTypes = {
+  classes: PropTypes.object.isRequired,
+  formControlProps: PropTypes.object,
+  error: PropTypes.bool,
+  success: PropTypes.bool,
+  isChecked: PropTypes.bool,
+  value: PropTypes.string,
+  label: PropTypes.string,
+  checkboxProps: PropTypes.object,
+};
+
+CustomSelect.defaultProps = {
+  formControlProps: {},
+  error: false,
+  success: false,
+  isChecked: false,
+  value: '',
+  label: '',
+  checkboxProps: {},
+};
 
 export default withStyles(customSelectStyle)(CustomSelect);

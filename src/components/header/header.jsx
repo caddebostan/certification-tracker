@@ -1,24 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Menu } from "@material-ui/icons";
-import {
-  withStyles,
-  AppBar,
-  Toolbar,
-  IconButton,
-  Hidden,
-  Button
-} from "@material-ui/core";
-import cx from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Menu } from '@material-ui/icons';
+import { withStyles, AppBar, Toolbar, IconButton, Hidden, Button } from '@material-ui/core';
+import cx from 'classnames';
 
-import headerStyle from "../../assets/jss/material-dashboard-react/headerStyle";
+import headerStyle from '../../assets/jss/material-dashboard-react/headerStyle';
 
-import HeaderLinks from "./headerLinks";
+import HeaderLinks from './headerLinks';
 
 function Header({ ...props }) {
   function makeBrand() {
-    var name;
-    props.routes.map((prop, key) => {
+    let name;
+    props.routes.map(prop => {
       if (prop.path === props.location.pathname) {
         name = prop.navbarName;
       }
@@ -28,7 +21,7 @@ function Header({ ...props }) {
   }
   const { classes, color } = props;
   const appBarClasses = cx({
-    [" " + classes[color]]: color
+    [` ${classes[color]}`]: color,
   });
   return (
     <AppBar className={classes.appBar + appBarClasses}>
@@ -59,7 +52,14 @@ function Header({ ...props }) {
 
 Header.propTypes = {
   classes: PropTypes.object.isRequired,
-  color: PropTypes.oneOf(["primary", "info", "success", "warning", "danger"])
+  color: PropTypes.oneOf(['primary', 'info', 'success', 'warning', 'danger']),
+  routes: PropTypes.array.isRequired,
+  location: PropTypes.object.isRequired,
+  handleDrawerToggle: PropTypes.func.isRequired,
+};
+
+Header.defaultProps = {
+  color: undefined,
 };
 
 export default withStyles(headerStyle)(Header);

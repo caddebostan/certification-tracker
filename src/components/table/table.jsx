@@ -37,9 +37,9 @@ const CustomTable = ({ ...props }) => {
               key={key}
               className="table-row"
             >
-              {prop.map((prop, key) => (
-                <TableCell className={classes.tableCell} key={key}>
-                  {prop}
+              {prop.map((item, index) => (
+                <TableCell className={classes.tableCell} key={index}>
+                  {item}
                 </TableCell>
               ))}
             </TableRow>
@@ -52,6 +52,8 @@ const CustomTable = ({ ...props }) => {
 
 CustomTable.defaultProps = {
   tableHeaderColor: 'gray',
+  tableHead: [''],
+  tableData: [['']],
 };
 
 CustomTable.propTypes = {

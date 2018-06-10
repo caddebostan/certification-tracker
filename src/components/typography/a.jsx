@@ -1,20 +1,21 @@
-import React from "react";
-import { withStyles } from "@material-ui/core";
-import PropTypes from "prop-types";
+import React from 'react';
+import { withStyles } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
-import typographyStyle from "../../assets/jss/material-dashboard-react/typographyStyle";
+import typographyStyle from '../../assets/jss/material-dashboard-react/typographyStyle';
 
 function A({ ...props }) {
   const { classes, children, ...rest } = props;
   return (
-    <a {...rest} className={classes.defaultFontStyle + " " + classes.aStyle}>
+    <a {...rest} className={`${classes.defaultFontStyle} ${classes.aStyle}`}>
       {children}
     </a>
   );
 }
 
 A.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default withStyles(typographyStyle)(A);

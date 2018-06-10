@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Field } from 'redux-form';
+import PropTypes from 'prop-types';
 
 import { CustomSelect } from '../../components';
 
@@ -55,5 +56,28 @@ class Select extends Component {
     );
   }
 }
+
+Select.propTypes = {
+  name: PropTypes.string.isRequired,
+  classes: PropTypes.object,
+  labelText: PropTypes.string,
+  validate: PropTypes.object,
+  value: PropTypes.string,
+  isChecked: PropTypes.bool,
+  label: PropTypes.string,
+  helperText: PropTypes.string,
+  formControlProps: PropTypes.object,
+};
+
+Select.defaultProps = {
+  label: '',
+  labelText: '',
+  validate: {},
+  value: '',
+  formControlProps: {},
+  isChecked: false,
+  helperText: '',
+  classes: {},
+};
 
 export default Select;
