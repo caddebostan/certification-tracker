@@ -11,7 +11,7 @@ import {
 
 import DashboardPage from '../views/dashboard/dashboard';
 import UserProfile from '../views/userProfile/userProfile';
-import Addmisions from '../views/addmisions/view/addmisionsView';
+import AddmisionsList from '../views/addmisions/addmisionsList/addmisionsList';
 import Typography from '../views/typography/typography';
 import Icons from '../views/icons/icons';
 import Maps from '../views/maps/maps';
@@ -30,7 +30,7 @@ const dashboardRoutes = [
     sidebarName: 'Basvurular',
     navbarName: 'Basvurular',
     icon: List,
-    component: Addmisions,
+    component: AddmisionsList,
   },
   {
     path: '/planlama',

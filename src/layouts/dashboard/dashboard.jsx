@@ -9,6 +9,7 @@ import { withStyles } from '@material-ui/core';
 import { Header, Footer, Sidebar } from '../../components';
 
 import dashboardRoutes from '../../routes/dashboard';
+import hiddenRoutes from '../../routes/hiddenRoutes';
 
 import appStyle from '../../assets/jss/material-dashboard-react/appStyle';
 
@@ -17,6 +18,11 @@ import logo from '../../assets/img/company_logo.png';
 
 const switchRoutes = (
   <Switch>
+    {hiddenRoutes.map((prop, key) => {
+      console.log(prop);
+      if (prop.redirect) return <Redirect from={prop.path} to={prop.to} key={key} />;
+      return <Route path={prop.path} component={prop.component} key={key} />;
+    })}
     {dashboardRoutes.map((prop, key) => {
       if (prop.redirect) return <Redirect from={prop.path} to={prop.to} key={key} />;
       return <Route path={prop.path} component={prop.component} key={key} />;

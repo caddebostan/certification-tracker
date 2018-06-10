@@ -6,26 +6,6 @@ import { reduxForm } from 'redux-form';
 import { ReduxFormInput, ReduxFormSelect, ItemGrid } from '../../components';
 
 // eslint-disable-next-line
-const selectData = [
-  {
-    value: '1',
-    label: 'ISO 9001',
-  },
-  {
-    value: '2',
-    label: 'OHSAS 18001',
-  },
-  {
-    value: '3',
-    label: 'ISO 13485',
-  },
-  {
-    value: '4',
-    label: 'ISO 10002',
-  },
-];
-
-// eslint-disable-next-line
 function AddmisionsForm({ ...props }) {
   return (
     <div>
