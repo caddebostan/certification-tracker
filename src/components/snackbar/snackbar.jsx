@@ -62,7 +62,7 @@ Snackbar.propTypes = {
 };
 
 Snackbar.defaultProps = {
-  color: undefined,
+  color: 'info',
   close: false,
   icon: undefined,
   place: undefined,

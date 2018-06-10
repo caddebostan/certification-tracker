@@ -63,7 +63,7 @@ Select.propTypes = {
   labelText: PropTypes.string,
   validate: PropTypes.object,
   value: PropTypes.string,
-  isChecked: PropTypes.bool,
+  isChecked: PropTypes.bool.isRequired,
   label: PropTypes.string,
   helperText: PropTypes.string,
   formControlProps: PropTypes.object,
@@ -72,10 +72,9 @@ Select.propTypes = {
 Select.defaultProps = {
   label: '',
   labelText: '',
-  validate: {},
+  validate: [],
   value: '',
   formControlProps: {},
-  isChecked: false,
   helperText: '',
   classes: {},
 };

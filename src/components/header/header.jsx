@@ -59,7 +59,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  color: undefined,
+  color: 'info',
 };
 
 export default withStyles(headerStyle)(Header);

@@ -36,6 +36,11 @@ function RegularCard({ ...props }) {
 
 RegularCard.defaultProps = {
   headerColor: 'purple',
+  plainCard: false,
+  cardTitle: '',
+  cardSubtitle: '',
+  content: '',
+  footer: '',
 };
 
 RegularCard.propTypes = {
@@ -46,14 +51,6 @@ RegularCard.propTypes = {
   cardSubtitle: PropTypes.node,
   content: PropTypes.node,
   footer: PropTypes.node,
-};
-
-RegularCard.defaultProps = {
-  plainCard: false,
-  cardTitle: '',
-  cardSubtitle: '',
-  content: '',
-  footer: '',
 };
 
 export default withStyles(regularCardStyle)(RegularCard);

@@ -87,7 +87,7 @@ Input.propTypes = {
 Input.defaultProps = {
   placeholder: '',
   labelText: '',
-  validate: {},
+  validate: [],
   value: '',
   onChange: undefined,
   disabled: false,
