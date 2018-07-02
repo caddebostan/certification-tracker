@@ -3,6 +3,8 @@ import { Grid, Typography } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
 
+import { required } from '../../utilities/validation';
+
 import { ReduxFormInput, ReduxFormSelect, ItemGrid } from '../../components';
 
 // eslint-disable-next-line
@@ -15,6 +17,7 @@ function AddmisionsForm({ ...props }) {
             name="firmaAdi"
             labelText="Firma Adı"
             helpText="(Varsa Bağlı olduğu Kuruluş) (Ticaret Sicil Gazetesi’ndeki)"
+            validate={required}
           />
         </ItemGrid>
         <ItemGrid xs={12} sm={12} md={6}>
