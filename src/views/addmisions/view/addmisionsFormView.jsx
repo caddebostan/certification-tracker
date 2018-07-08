@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Grid } from '@material-ui/core';
-import PropTypes from 'prop-types';
 
 // Constants
 
@@ -37,6 +36,7 @@ class AddmisionsFormView extends Component {
   );
 
   _handleBackButton = () => {
+    /* eslint-disable-next-line */
     this.props.history.push('/basvurular');
   };
 
@@ -56,9 +56,5 @@ class AddmisionsFormView extends Component {
     );
   }
 }
-
-AddmisionsFormView.propTypes = {
-  handleBackButton: PropTypes.func.isRequired,
-};
 
 export default AddmisionsFormView;
