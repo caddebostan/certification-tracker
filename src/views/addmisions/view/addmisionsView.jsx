@@ -24,14 +24,14 @@ class AddmisionsView extends Component {
     // TODO: when we got data from our database all this things sholuld be fix.
     this.setState({
       tableData: [
-        ['1', 'Dakota Rice', '$36,738', 'Niger', 'Oud-Turnhout'],
-        ['2', 'Minerva Hooper', '$23,789', 'Curaçao', 'Sinaai-Waas'],
-        ['3', 'Sage Rodriguez', '$56,142', 'Netherlands', 'Baileux'],
-        ['4', 'Philip Chaney', '$38,735', 'Korea, South', 'Overland Park'],
-        ['5', 'Doris Greene', '$63,542', 'Malawi', 'Feldkirchen in Kärnten'],
-        ['6', 'Mason Porter', '$78,615', 'Chile', 'Gloucester'],
+        ['1', 'Netas', 'Sahin', 'Samsun', 'Bekliyor'],
+        ['3', 'Honda', 'Selami', 'Manisa', 'Ucret'],
+        ['2', 'Otolastik', 'Nabi', 'Istanbul', 'Bekliyor'],
+        ['4', 'Philip', 'Mustafa', 'Antalya', 'Teklif'],
+        ['5', 'Novartis', 'Ahmet Mehmet', 'Sakarya', 'Planlamada'],
+        ['6', 'Ugur', 'Ugur ERDAL', 'Trabzon', 'Bekliyor'],
       ],
-      tableHead: ['ID', 'Name', 'Country', 'City', 'Salary'],
+      tableHead: ['No', 'Firma Adi', 'Yetkili', 'Adresi', 'Durum'],
     });
   }
 

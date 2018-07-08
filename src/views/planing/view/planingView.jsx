@@ -24,14 +24,14 @@ class PlaningView extends Component {
     // TODO: when we got data from our database all this things sholuld be fix.
     this.setState({
       tableData: [
-        ['4', 'Philip Chaney', '$38,735', 'Korea, South', 'Overland Park'],
-        ['1', 'Dakota Rice', '$36,738', 'Niger', 'Oud-Turnhout'],
-        ['6', 'Mason Porter', '$78,615', 'Chile', 'Gloucester'],
-        ['5', 'Doris Greene', '$63,542', 'Malawi', 'Feldkirchen in Kärnten'],
-        ['2', 'Minerva Hooper', '$23,789', 'Curaçao', 'Sinaai-Waas'],
-        ['3', 'Sage Rodriguez', '$56,142', 'Netherlands', 'Baileux'],
+        ['6', 'Ugur', 'Ugur ERDAL', 'Trabzon', 'Bekliyor'],
+        ['3', 'Honda', 'Selami', 'Manisa', 'Ucret'],
+        ['5', 'Novartis', 'Ahmet Mehmet', 'Sakarya', 'Planlamada'],
+        ['2', 'Otolastik', 'Nabi', 'Istanbul', 'Bekliyor'],
+        ['4', 'Philip', 'Mustafa', 'Antalya', 'Teklif'],
+        ['1', 'Netas', 'Sahin', 'Samsun', 'Bekliyor'],
       ],
-      tableHead: ['ID', 'Name', 'Country', 'City', 'Salary'],
+      tableHead: ['No', 'Firma Adi', 'Yetkili', 'Adresi', 'Durum'],
     });
   }
 

@@ -46,8 +46,8 @@ class PlaningFormView extends Component {
         <ItemGrid xs={12} sm={12} md={12}>
           <RegularCard
             plainCard={false}
-            cardTitle="Planlama Formu"
-            cardSubtitle="Secilen basvuruyu planla."
+            cardTitle="BAŞVURU GÖZDEN GEÇİRME VE PLANLAMA FORMU"
+            cardSubtitle="Secilen basvuruyu planlayiniz ve kaydet butonuna basiniz."
             content={this._getContent()}
             footer={this._getFooter()}
           />
