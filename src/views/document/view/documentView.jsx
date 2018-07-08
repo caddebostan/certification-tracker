@@ -11,9 +11,9 @@ import {
   SnackbarContent,
   Snackbar,
   ItemGrid,
-} from '../../components';
+} from '../../../components';
 
-class Notifications extends React.Component {
+class DocumentView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -217,4 +217,4 @@ class Notifications extends React.Component {
   }
 }
 
-export default Notifications;
+export default DocumentView;

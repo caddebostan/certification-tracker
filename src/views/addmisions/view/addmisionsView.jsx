@@ -10,7 +10,7 @@ import AddmisionsListView from './addmisionsListView';
 *
 */
 
-class AddmisionsList extends Component {
+class AddmisionsView extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -42,8 +42,6 @@ class AddmisionsList extends Component {
     this.props.history.push('/basvurular/form');
   };
 
-  _handleBackButton = () => {};
-
   render() {
     const { tableData, tableHead } = this.state;
 
@@ -58,8 +56,8 @@ class AddmisionsList extends Component {
   }
 }
 
-AddmisionsList.propTypes = {
+AddmisionsView.propTypes = {
   history: PropTypes.object.isRequired,
 };
 
-export default AddmisionsList;
+export default AddmisionsView;

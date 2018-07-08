@@ -58,6 +58,7 @@ import HeaderLinks from './header/headerLinks';
 // #############################
 
 import AddmisionsForm from './forms/addmisionsForm';
+import PlaningForm from './forms/planingForm';
 
 // ##############################
 // // // Sidebar
@@ -102,6 +103,7 @@ import A from './typography/a';
 
 export {
   AddmisionsForm,
+  PlaningForm,
   ChartCard,
   ProfileCard,
   RegularCard,

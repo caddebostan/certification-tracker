@@ -10,12 +10,12 @@ import {
 } from '@material-ui/icons';
 
 import DashboardPage from '../views/dashboard/dashboard';
-import UserProfile from '../views/userProfile/userProfile';
-import AddmisionsList from '../views/addmisions/addmisionsList/addmisionsList';
-import Typography from '../views/typography/typography';
+import Planing from '../views/planing/view/planingView';
+import Addmisions from '../views/addmisions/view/addmisionsView';
+import Examination from '../views/typography/typography';
 import Icons from '../views/icons/icons';
 import Maps from '../views/maps/maps';
-import NotificationsPage from '../views/notifications/notifications';
+import Document from '../views/document/view/documentView';
 
 const dashboardRoutes = [
   {
@@ -30,21 +30,21 @@ const dashboardRoutes = [
     sidebarName: 'Basvurular',
     navbarName: 'Basvurular',
     icon: List,
-    component: AddmisionsList,
+    component: Addmisions,
   },
   {
     path: '/planlama',
     sidebarName: 'Planlama',
     navbarName: 'Planlama',
     icon: Assignment,
-    component: UserProfile,
+    component: Planing,
   },
   {
     path: '/tetkikler',
     sidebarName: 'Tetkikler',
     navbarName: 'Tetkikler',
     icon: LibraryBooks,
-    component: Typography,
+    component: Examination,
   },
   {
     path: '/belge',
@@ -65,14 +65,14 @@ const dashboardRoutes = [
     sidebarName: 'Denetci Performans',
     navbarName: 'Denetci Performans',
     icon: SupervisorAccount,
-    component: NotificationsPage,
+    component: Document,
   },
   {
     path: '/dokumanlar',
     sidebarName: 'Dokumanlar',
     navbarName: 'Dokumanlar',
     icon: InsertDriveFile,
-    component: NotificationsPage,
+    component: Document,
   },
   { redirect: true, path: '/', to: '/dashboard', navbarName: 'Redirect' },
 ];

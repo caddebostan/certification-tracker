@@ -11,7 +11,7 @@ import { RegularCard, ItemGrid, Table } from '../../../components';
 *
 */
 
-class AddmisionsListView extends Component {
+class PlaningListView extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -35,8 +35,8 @@ class AddmisionsListView extends Component {
         <ItemGrid xs={12} sm={12} md={12}>
           <RegularCard
             plainCard={false}
-            cardTitle="Basvurular"
-            cardSubtitle="Basvuruyu sec ve onayla."
+            cardTitle="Planlama"
+            cardSubtitle="Planlanacak basvuruyu seciniz."
             content={this._getContent()}
           />
         </ItemGrid>
@@ -45,17 +45,17 @@ class AddmisionsListView extends Component {
   }
 }
 
-AddmisionsListView.propTypes = {
+PlaningListView.propTypes = {
   tableData: PropTypes.array,
   tableHead: PropTypes.array,
   tableHeaderColor: PropTypes.string,
   handleOnRowClick: PropTypes.func.isRequired,
 };
 
-AddmisionsListView.defaultProps = {
+PlaningListView.defaultProps = {
   tableData: [],
   tableHead: [],
   tableHeaderColor: 'red',
 };
 
-export default AddmisionsListView;
+export default PlaningListView;

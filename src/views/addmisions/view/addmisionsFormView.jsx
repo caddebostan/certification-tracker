@@ -18,7 +18,6 @@ class AddmisionsFormView extends Component {
     super(props);
     this.state = {
       selectedRowItem: null,
-      cardSubtitle: 'Basvuruyu sec ve onayla.',
     };
   }
 
@@ -28,28 +27,27 @@ class AddmisionsFormView extends Component {
     return <AddmisionsForm selectedItemID={selectedRowItem} />;
   };
 
-  _getFooter = () => {
-    const { handleBackButton } = this.props;
-    return (
-      <div>
-        <Button color="danger" onClick={() => handleBackButton()}>
-          Geri
-        </Button>
-        <Button color="rose">Kaydet ve Onayla</Button>
-      </div>
-    );
+  _getFooter = () => (
+    <div>
+      <Button color="danger" onClick={() => this._handleBackButton()}>
+        Geri
+      </Button>
+      <Button color="rose">Kaydet ve Onayla</Button>
+    </div>
+  );
+
+  _handleBackButton = () => {
+    this.props.history.push('/basvurular');
   };
 
   render() {
-    const { cardSubtitle } = this.state;
-
     return (
       <Grid container>
         <ItemGrid xs={12} sm={12} md={12}>
           <RegularCard
             plainCard={false}
             cardTitle="Basvurular"
-            cardSubtitle={cardSubtitle}
+            cardSubtitle="Basvuruyu sec ve onayla."
             content={this._getContent()}
             footer={this._getFooter()}
           />
