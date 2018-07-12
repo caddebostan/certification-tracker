@@ -37,13 +37,15 @@
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "test:ci": "yarn run lint",
-    "coverage": "yarn run test -- --coverage --collectCoverageFrom=src/**/*.js --collectCoverageFrom=!src/index.js",
+    "coverage":
+      "yarn run test -- --coverage --collectCoverageFrom=src/**/*.js --collectCoverageFrom=!src/index.js",
     "postcoverage": "istanbul check-coverage --statements 1 --functions 1 --branches 1 --lines 1xw",
     "eject": "react-scripts eject",
     "lint:eslint": "eslint .",
     "lint:stylelint": "stylelint 'src/**/*.css, src/**/*.scss'",
     "lint": "yarn run lint:eslint && yarn run lint:stylelint",
-    "format": "prettier --print-width=100 --single-quote --trailing-comma all --write \"{src,__tests__}/**/*.js\"",
+    "format":
+      "prettier --print-width=100 --single-quote --trailing-comma all --write \"{src,__tests__}/**/*.js\"",
     "lint-staged": "lint-staged",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
@@ -72,15 +74,10 @@
     "stylelint-config-standard": "^18.0.0"
   },
   "lint-staged": {
-    "*.js": [
-      "yarn run lint",
-      "git add"
-    ]
+    "*.{js,jsx}": ["yarn run lint", "git add"]
   },
   "pre-commit": "lint-staged",
   "jest": {
-    "snapshotSerializers": [
-      "<rootDir>/node_modules/enzyme-to-json/serializer"
-    ]
+    "snapshotSerializers": ["<rootDir>/node_modules/enzyme-to-json/serializer"]
   }
 }
