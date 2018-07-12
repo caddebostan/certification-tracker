@@ -8,9 +8,9 @@ import { required } from '../../utilities/validation';
 import { ReduxFormInput, ReduxFormSelect, ItemGrid } from '../../components';
 
 // eslint-disable-next-line
-function AddmisionsForm({ ...props }) {
+function AddmisionsForm({ handleSubmit, onSubmit, ...props }) {
   return (
-    <div>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <Grid container>
         <ItemGrid xs={12} sm={12} md={6}>
           <ReduxFormInput
@@ -276,7 +276,7 @@ function AddmisionsForm({ ...props }) {
           />
         </ItemGrid>
       </Grid>
-    </div>
+    </form>
   );
 }
 

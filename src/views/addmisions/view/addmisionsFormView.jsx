@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Grid } from '@material-ui/core';
+import { connect } from 'react-redux';
+import { submit, isPristine, isSubmitting } from 'redux-form';
 
 // Constants
 
@@ -20,20 +23,36 @@ class AddmisionsFormView extends Component {
     };
   }
 
+  _submitAddmisionsForm = values => {
+    console.log('_submitAddmisionsForm', values);
+    window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`);
+  };
+
   _getContent = () => {
     const { selectedRowItem } = this.state;
 
-    return <AddmisionsForm selectedItemID={selectedRowItem} />;
+    return (
+      <AddmisionsForm selectedItemID={selectedRowItem} onSubmit={this._submitAddmisionsForm} />
+    );
   };
 
-  _getFooter = () => (
-    <div>
-      <Button color="danger" onClick={() => this._handleBackButton()}>
-        Geri
-      </Button>
-      <Button color="rose">Kaydet ve Onayla</Button>
-    </div>
-  );
+  _getFooter = () => {
+    const { dispatch, pristine, submitting } = this.props;
+    return (
+      <div>
+        <Button color="danger" onClick={() => this._handleBackButton()}>
+          Geri
+        </Button>
+        <Button
+          color="rose"
+          disabled={pristine || submitting}
+          onClick={() => dispatch(submit('AddmisionsForm'))}
+        >
+          Kaydet ve Onayla
+        </Button>
+      </div>
+    );
+  };
 
   _handleBackButton = () => {
     /* eslint-disable-next-line */
@@ -57,4 +76,15 @@ class AddmisionsFormView extends Component {
   }
 }
 
-export default AddmisionsFormView;
+const mapStateToProps = state => ({
+  pristine: isPristine('AddmisionsForm')(state),
+  submitting: isSubmitting('AddmisionsForm')(state),
+});
+
+AddmisionsFormView.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  pristine: PropTypes.bool.isRequired,
+  submitting: PropTypes.bool.isRequired,
+};
+
+export default connect(mapStateToProps)(AddmisionsFormView);
