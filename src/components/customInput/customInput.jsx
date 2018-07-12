@@ -1,6 +1,5 @@
 import React from 'react';
 import { withStyles, FormControl, InputLabel, Input } from '@material-ui/core';
-import { Clear, Check } from '@material-ui/icons';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
@@ -54,11 +53,6 @@ function CustomInput({ ...props }) {
         id={id}
         {...inputProps}
       />
-      {error ? (
-        <Clear className={`${classes.feedback} ${classes.labelRootError}`} />
-      ) : success ? (
-        <Check className={`${classes.feedback} ${classes.labelRootSuccess}`} />
-      ) : null}
     </FormControl>
   );
 }
