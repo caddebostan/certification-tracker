@@ -1,7 +1,6 @@
 import React from 'react';
-import { withStyles, FormControl, InputLabel, Input } from '@material-ui/core';
+import { withStyles, FormControl, InputLabel, Input, FormHelperText } from '@material-ui/core';
 import PropTypes from 'prop-types';
-import cx from 'classnames';
 
 import customInputStyle from '../../assets/jss/material-dashboard-react/customInputStyle';
 
@@ -14,45 +13,25 @@ function CustomInput({ ...props }) {
     labelProps,
     inputProps,
     error,
-    success,
     type,
     helperText,
+    disabled,
   } = props;
 
-  const labelClasses = cx({
-    [` ${classes.labelRootError}`]: error,
-    [` ${classes.labelRootSuccess}`]: success && !error,
-  });
-  const underlineClasses = cx({
-    [classes.underlineError]: error,
-    [classes.underlineSuccess]: success && !error,
-    [classes.underline]: true,
-  });
-  const marginTop = cx({
-    [classes.marginTop]: labelText === undefined,
-  });
   return (
     <FormControl
       {...formControlProps}
       className={`${formControlProps.className} ${classes.formControl}`}
+      error={error}
+      disabled={disabled}
     >
       {labelText !== undefined ? (
-        <InputLabel className={classes.labelRoot + labelClasses} htmlFor={id} {...labelProps}>
+        <InputLabel htmlFor={id} {...labelProps}>
           {labelText}
         </InputLabel>
       ) : null}
-      <Input
-        classes={{
-          // border-bottom: 0px solid rgba(0, 0, 0, 0);
-          root: marginTop,
-          disabled: classes.disabled,
-          underline: underlineClasses,
-        }}
-        helperText={helperText}
-        type={type}
-        id={id}
-        {...inputProps}
-      />
+      <Input type={type} id={id} {...inputProps} />
+      <FormHelperText>{error || helperText}</FormHelperText>
     </FormControl>
   );
 }
@@ -64,7 +43,8 @@ CustomInput.propTypes = {
   id: PropTypes.string,
   labelProps: PropTypes.object,
   inputProps: PropTypes.object,
-  error: PropTypes.bool,
+  error: PropTypes.string,
+  disabled: PropTypes.bool,
   success: PropTypes.bool,
   type: PropTypes.string,
   helperText: PropTypes.string,
@@ -77,6 +57,7 @@ CustomInput.defaultProps = {
   labelProps: {},
   inputProps: {},
   error: false,
+  disabled: false,
   success: false,
   type: '',
   helperText: '',

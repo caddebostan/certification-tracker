@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Field } from 'redux-form';
-import { InputLabel } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
 import { CustomInput } from '../../components';
@@ -18,6 +17,7 @@ class Input extends Component {
           error={touched && error}
           success={touched && !error}
           labelText={field.labelText}
+          helperText={field.helpText}
           value={field.value}
           onChange={field.onChange}
           placeholder={field.placeholder}
@@ -28,14 +28,6 @@ class Input extends Component {
           }}
           inputProps={{ ...field.input, ...field.inputProps }}
         />
-        <InputLabel
-          style={{
-            color: '#cbcbcb',
-            fontSize: '11px',
-          }}
-        >
-          {field.helpText}
-        </InputLabel>
       </div>
     );
   };
