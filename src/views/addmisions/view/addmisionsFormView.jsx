@@ -23,24 +23,18 @@ class AddmisionsFormView extends Component {
     };
   }
 
-  _submitAddmisionsForm = values => {
-    console.log('_submitAddmisionsForm', values);
-    window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`);
-  };
-
   _getContent = () => {
     const { selectedRowItem } = this.state;
+    const { submitAddmisionsForm } = this.props;
 
-    return (
-      <AddmisionsForm selectedItemID={selectedRowItem} onSubmit={this._submitAddmisionsForm} />
-    );
+    return <AddmisionsForm selectedItemID={selectedRowItem} onSubmit={submitAddmisionsForm} />;
   };
 
   _getFooter = () => {
-    const { dispatch, pristine, submitting } = this.props;
+    const { dispatch, pristine, submitting, handleBackButton } = this.props;
     return (
       <div>
-        <Button color="danger" onClick={() => this._handleBackButton()}>
+        <Button color="danger" onClick={() => handleBackButton()}>
           Geri
         </Button>
         <Button
@@ -52,11 +46,6 @@ class AddmisionsFormView extends Component {
         </Button>
       </div>
     );
-  };
-
-  _handleBackButton = () => {
-    /* eslint-disable-next-line */
-    this.props.history.push('/basvurular');
   };
 
   render() {
@@ -85,6 +74,8 @@ AddmisionsFormView.propTypes = {
   dispatch: PropTypes.func.isRequired,
   pristine: PropTypes.bool.isRequired,
   submitting: PropTypes.bool.isRequired,
+  submitAddmisionsForm: PropTypes.func.isRequired,
+  handleBackButton: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps)(AddmisionsFormView);

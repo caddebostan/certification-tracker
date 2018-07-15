@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // Components
-import AddmisionsListView from './addmisionsListView';
+import AddmisionsListView from '../view/addmisionsListView';
 
 /*
 *            Props Name        Description                                     Value
@@ -10,7 +10,7 @@ import AddmisionsListView from './addmisionsListView';
 *
 */
 
-class AddmisionsView extends Component {
+class AddmisionsListContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -56,8 +56,8 @@ class AddmisionsView extends Component {
   }
 }
 
-AddmisionsView.propTypes = {
+AddmisionsListContainer.propTypes = {
   history: PropTypes.object.isRequired,
 };
 
-export default AddmisionsView;
+export default AddmisionsListContainer;

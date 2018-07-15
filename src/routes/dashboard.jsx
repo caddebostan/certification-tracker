@@ -11,7 +11,7 @@ import {
 
 import DashboardPage from '../views/dashboard/dashboard';
 import Planing from '../views/planing/view/planingView';
-import Addmisions from '../views/addmisions/view/addmisionsView';
+import Addmisions from '../views/addmisions/container/addmisionsListContainer';
 import Examination from '../views/typography/typography';
 import Icons from '../views/icons/icons';
 import Maps from '../views/maps/maps';

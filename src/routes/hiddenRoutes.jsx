@@ -1,4 +1,4 @@
-import AddmisionsForm from '../views/addmisions/view/addmisionsFormView';
+import AddmisionsForm from '../views/addmisions/container/addmisionsFormContainer';
 import PlaningForm from '../views/planing/view/planingFormView';
 
 const hiddenRoutes = [
