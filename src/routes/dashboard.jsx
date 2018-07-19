@@ -19,62 +19,62 @@ import Document from '../views/document/view/documentView';
 
 const dashboardRoutes = [
   {
-    path: '/dashboard',
+    path: '/admin/dashboard',
     sidebarName: 'Özet',
     navbarName: 'Özet',
     icon: Dashboard,
     component: DashboardPage,
   },
   {
-    path: '/basvurular',
+    path: '/admin/basvurular',
     sidebarName: 'Basvurular',
     navbarName: 'Basvurular',
     icon: List,
     component: Addmisions,
   },
   {
-    path: '/planlama',
+    path: '/admin/planlama',
     sidebarName: 'Planlama',
     navbarName: 'Planlama',
     icon: Assignment,
     component: Planing,
   },
   {
-    path: '/tetkikler',
+    path: '/admin/tetkikler',
     sidebarName: 'Tetkikler',
     navbarName: 'Tetkikler',
     icon: LibraryBooks,
     component: Examination,
   },
   {
-    path: '/belge',
+    path: '/admin/belge',
     sidebarName: 'Belge',
     navbarName: 'Belge',
     icon: Description,
     component: Icons,
   },
   {
-    path: '/ucret',
+    path: '/admin/ucret',
     sidebarName: 'Ucret Takip',
     navbarName: 'Ucret Takip',
     icon: Receipt,
     component: Maps,
   },
   {
-    path: '/denetci',
+    path: '/admin/denetci',
     sidebarName: 'Denetci Performans',
     navbarName: 'Denetci Performans',
     icon: SupervisorAccount,
     component: Document,
   },
   {
-    path: '/dokumanlar',
+    path: '/admin/dokumanlar',
     sidebarName: 'Dokumanlar',
     navbarName: 'Dokumanlar',
     icon: InsertDriveFile,
     component: Document,
   },
-  { redirect: true, path: '/', to: '/dashboard', navbarName: 'Redirect' },
+  { redirect: true, path: '/admin', to: '/admin/dashboard', navbarName: 'Redirect' },
 ];
 
 export default dashboardRoutes;
