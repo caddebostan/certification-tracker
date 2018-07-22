@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { Manager, Target, Popper } from 'react-popper';
 import {
   withStyles,
@@ -130,9 +131,11 @@ class HeaderLinks extends React.Component {
                     <MenuItem onClick={this.handleClose} className={classes.dropdownItem}>
                       Another Notification
                     </MenuItem>
-                    <MenuItem onClick={this.handleClose} className={classes.dropdownItem}>
-                      Cikis Yap
-                    </MenuItem>
+                    <Link to="login">
+                      <MenuItem onClick={this.handleClose} className={classes.dropdownItem}>
+                        Cikis Yap
+                      </MenuItem>
+                    </Link>
                   </MenuList>
                 </Paper>
               </Grow>
