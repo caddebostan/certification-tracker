@@ -1,5 +1,5 @@
 // validation functions
-const required = value => (value == null ? 'Required' : undefined);
+const required = value => (value == null ? 'Zorunlu' : undefined);
 const email = value =>
   value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? 'Invalid email' : undefined;
 const maxLength = max => value =>

@@ -1,5 +1,6 @@
 import {
   Dashboard,
+  Person,
   List,
   LibraryBooks,
   SupervisorAccount,
@@ -10,6 +11,7 @@ import {
 } from '@material-ui/icons';
 
 import DashboardPage from '../views/dashboard/dashboard';
+import Login from '../views/login';
 import Planing from '../views/planing/view/planingView';
 import Addmisions from '../views/addmisions/container/addmisionsListContainer';
 import Examination from '../views/typography/typography';
@@ -24,6 +26,13 @@ const dashboardRoutes = [
     navbarName: 'Özet',
     icon: Dashboard,
     component: DashboardPage,
+  },
+  {
+    path: '/login',
+    sidebarName: 'Login',
+    navbarName: 'Login',
+    icon: Person,
+    component: Login,
   },
   {
     path: '/basvurular',
