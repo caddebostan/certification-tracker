@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Grid } from '@material-ui/core';
-
+import { Link } from 'react-router-dom';
 import { RegularCard, ItemGrid, LoginForm, Button } from '../../../components';
 
 export default class Login extends Component {
@@ -13,7 +13,9 @@ export default class Login extends Component {
 
   _getFooter = () => (
     <div>
-      <Button color="success">Giris</Button>
+      <Link to="dashboard">
+        <Button color="success">Giris</Button>
+      </Link>
     </div>
   );
 

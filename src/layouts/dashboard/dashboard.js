@@ -42,7 +42,7 @@ class App extends React.Component {
   }
   componentDidUpdate() {
     // eslint-disable-next-line
-    this.refs.mainPanel.scrollTop = 0;
+    // this.refs.mainPanel.scrollTop = 0;
   }
   getRoute() {
     return this.props.location.pathname !== '/maps';

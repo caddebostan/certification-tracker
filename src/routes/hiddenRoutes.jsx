@@ -1,5 +1,6 @@
 import AddmisionsForm from '../views/addmisions/container/addmisionsFormContainer';
 import PlaningForm from '../views/planing/view/planingFormView';
+import Login from '../views/login';
 
 const hiddenRoutes = [
   {
@@ -9,6 +10,10 @@ const hiddenRoutes = [
   {
     path: '/planlama/form',
     component: PlaningForm,
+  },
+  {
+    path: '/login',
+    component: Login,
   },
 ];
 
