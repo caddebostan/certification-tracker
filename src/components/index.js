@@ -59,6 +59,7 @@ import HeaderLinks from './header/headerLinks';
 
 import AddmisionsForm from './forms/addmisionsForm';
 import PlaningForm from './forms/planingForm';
+import OfferForm from './forms/offerForm';
 import LoginForm from './forms/loginForm';
 import UserCreateForm from './forms/userCreateForm';
 
@@ -108,6 +109,7 @@ export {
   PlaningForm,
   LoginForm,
   UserCreateForm,
+  OfferForm,
   ChartCard,
   ProfileCard,
   RegularCard,

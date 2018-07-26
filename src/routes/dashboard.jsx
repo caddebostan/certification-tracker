@@ -2,6 +2,8 @@ import {
   Dashboard,
   List,
   LibraryBooks,
+  AccessAlarms,
+  LocalOffer,
   SupervisorAccount,
   Receipt,
   InsertDriveFile,
@@ -12,7 +14,8 @@ import {
 
 import DashboardPage from '../views/dashboard/dashboard';
 import Planing from '../views/planing/view/planingView';
-import Addmisions from '../views/addmisions/container/addmisionsListContainer';
+import Offer from '../views/offer/view/offerView';
+import Addmisions from '../views/addmisions/view/addmisionsView';
 import Examination from '../views/typography/typography';
 import Icons from '../views/icons/icons';
 import Maps from '../views/maps/maps';
@@ -35,10 +38,17 @@ const dashboardRoutes = [
     component: Addmisions,
   },
   {
+    path: '/teklifler',
+    sidebarName: 'Teklifler',
+    navbarName: 'Teklifler',
+    icon: LocalOffer,
+    component: Offer,
+  },
+  {
     path: '/planlama',
     sidebarName: 'Planlama',
     navbarName: 'Planlama',
-    icon: Assignment,
+    icon: AccessAlarms,
     component: Planing,
   },
   {
