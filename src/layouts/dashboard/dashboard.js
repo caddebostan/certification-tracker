@@ -19,7 +19,6 @@ import logo from '../../assets/img/company_logo.png';
 const switchRoutes = (
   <Switch>
     {hiddenRoutes.map((prop, key) => {
-      console.log(prop);
       if (prop.redirect) return <Redirect from={prop.path} to={prop.to} key={key} />;
       return <Route path={prop.path} component={prop.component} key={key} />;
     })}

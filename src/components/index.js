@@ -16,6 +16,12 @@ import ReduxFormInput from './reduxFormComponents/input';
 import ReduxFormSelect from './reduxFormComponents/select';
 
 // ##############################
+// // // Clickable
+// #############################
+import ClickableList from './clickableList/view/clickableListView';
+import ClickableStats from './clickableStatsCard/view/clickableStatsView';
+
+// ##############################
 // // // CustomButtons
 // #############################
 
@@ -104,39 +110,41 @@ import Small from './typography/small';
 import A from './typography/a';
 
 export {
+  A,
   AddmisionsForm,
-  PlaningForm,
-  LoginForm,
-  UserCreateForm,
-  ChartCard,
-  ProfileCard,
-  RegularCard,
-  StatsCard,
-  TasksCard,
   Button,
-  IconButton,
+  ChartCard,
+  ClickableList,
+  ClickableStats,
   CustomInput,
   CustomSelect,
+  Danger,
   Footer,
-  ItemGrid,
   Header,
   HeaderLinks,
+  IconButton,
+  Info,
+  ItemGrid,
+  LoginForm,
+  Muted,
+  P,
+  PlaningForm,
+  Primary,
+  ProfileCard,
+  Quote,
+  ReduxFormInput,
+  ReduxFormSelect,
+  RegularCard,
   Sidebar,
+  Small,
   Snackbar,
   SnackbarContent,
+  StatsCard,
+  Success,
   Table,
   TableList,
   Tasks,
-  P,
-  Quote,
-  Muted,
-  Primary,
-  ReduxFormInput,
-  ReduxFormSelect,
-  Info,
-  Success,
+  TasksCard,
+  UserCreateForm,
   Warning,
-  Danger,
-  Small,
-  A,
 };

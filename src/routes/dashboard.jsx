@@ -12,12 +12,13 @@ import {
 
 import DashboardPage from '../views/dashboard/dashboard';
 import Planing from '../views/planing/view/planingView';
-import Addmisions from '../views/addmisions/container/addmisionsListContainer';
+import Addmisions from '../views/addmisions/container/addmisionsContainer';
 import Examination from '../views/typography/typography';
 import Icons from '../views/icons/icons';
 import Maps from '../views/maps/maps';
 import Document from '../views/document/view/documentView';
 import UserCreate from '../views/userCreate';
+import Research from '../views/research';
 
 const dashboardRoutes = [
   {
@@ -45,6 +46,13 @@ const dashboardRoutes = [
     path: '/tetkikler',
     sidebarName: 'Tetkikler',
     navbarName: 'Tetkikler',
+    icon: LibraryBooks,
+    component: Research,
+  },
+  {
+    path: '/texts',
+    sidebarName: 'Texts',
+    navbarName: 'Texts',
     icon: LibraryBooks,
     component: Examination,
   },

@@ -2,15 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // Components
-import AddmisionsListView from '../view/addmisionsListView';
-
+import { ClickableList } from '../../../components';
 /*
 *            Props Name        Description                                     Value
 *@props -->  props name here   description here                                Value Type Here
 *
 */
 
-class AddmisionsListContainer extends Component {
+class AddmisionsView extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -39,6 +38,8 @@ class AddmisionsListContainer extends Component {
 
   _handleOnRowClick = id => {
     console.log(id);
+    const ugur = id;
+    const xx = id;
     this.props.history.push('/basvurular/form');
   };
 
@@ -46,9 +47,12 @@ class AddmisionsListContainer extends Component {
     const { tableData, tableHead } = this.state;
 
     return (
-      <AddmisionsListView
+      <ClickableList
         tableData={tableData}
         tableHead={tableHead}
+        plainCard
+        title="Basvurular"
+        subTitle="Basvurulardan seciniz."
         tableHeaderColor
         handleOnRowClick={this._handleOnRowClick}
       />
@@ -56,8 +60,8 @@ class AddmisionsListContainer extends Component {
   }
 }
 
-AddmisionsListContainer.propTypes = {
+AddmisionsView.propTypes = {
   history: PropTypes.object.isRequired,
 };
 
-export default AddmisionsListContainer;
+export default AddmisionsView;
