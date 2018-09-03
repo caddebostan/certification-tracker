@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // Components
-import AddmisionsListView from '../view/addmisionsListView';
+import { ClickableList } from '../../../components';
 
 /*
 *            Props Name        Description                                     Value
@@ -10,7 +10,7 @@ import AddmisionsListView from '../view/addmisionsListView';
 *
 */
 
-class AddmisionsListContainer extends Component {
+class PlaningView extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,12 +24,12 @@ class AddmisionsListContainer extends Component {
     // TODO: when we got data from our database all this things sholuld be fix.
     this.setState({
       tableData: [
-        ['1', 'Netas', 'Sahin', 'Samsun', 'Bekliyor'],
+        ['6', 'Ugur', 'Ugur ERDAL', 'Trabzon', 'Bekliyor'],
         ['3', 'Honda', 'Selami', 'Manisa', 'Ucret'],
+        ['5', 'Novartis', 'Ahmet Mehmet', 'Sakarya', 'Planlamada'],
         ['2', 'Otolastik', 'Nabi', 'Istanbul', 'Bekliyor'],
         ['4', 'Philip', 'Mustafa', 'Antalya', 'Teklif'],
-        ['5', 'Novartis', 'Ahmet Mehmet', 'Sakarya', 'Planlamada'],
-        ['6', 'Ugur', 'Ugur ERDAL', 'Trabzon', 'Bekliyor'],
+        ['1', 'Netas', 'Sahin', 'Samsun', 'Bekliyor'],
       ],
       tableHead: ['No', 'Firma Adi', 'Yetkili', 'Adresi', 'Durum'],
     });
@@ -39,16 +39,18 @@ class AddmisionsListContainer extends Component {
 
   _handleOnRowClick = id => {
     console.log(id);
-    this.props.history.push('/basvurular/form');
+    this.props.history.push('/planlama/form');
   };
 
   render() {
     const { tableData, tableHead } = this.state;
 
     return (
-      <AddmisionsListView
+      <ClickableList
         tableData={tableData}
         tableHead={tableHead}
+        title="Planlama"
+        subTitle="Planlanacak basvuruyu seciniz."
         tableHeaderColor
         handleOnRowClick={this._handleOnRowClick}
       />
@@ -56,8 +58,8 @@ class AddmisionsListContainer extends Component {
   }
 }
 
-AddmisionsListContainer.propTypes = {
+PlaningView.propTypes = {
   history: PropTypes.object.isRequired,
 };
 
-export default AddmisionsListContainer;
+export default PlaningView;

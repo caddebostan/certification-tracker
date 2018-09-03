@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // Components
-import PlaningListView from './planingListView';
+import { ClickableList } from '../../../components';
 
 /*
 *            Props Name        Description                                     Value
@@ -10,7 +10,7 @@ import PlaningListView from './planingListView';
 *
 */
 
-class PlaningView extends Component {
+class ResearchView extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,26 +38,27 @@ class PlaningView extends Component {
   // Component Functions
 
   _handleOnRowClick = id => {
-    console.log(id);
-    this.props.history.push('/planlama/form');
+    this.props.history.push('/research/select');
   };
 
   render() {
     const { tableData, tableHead } = this.state;
 
     return (
-      <PlaningListView
+      <ClickableList
+        handleOnRowClick={this._handleOnRowClick}
+        subTitle="Tetkik yapilacak olani seciniz."
         tableData={tableData}
         tableHead={tableHead}
         tableHeaderColor
-        handleOnRowClick={this._handleOnRowClick}
+        title="Tetkikler"
       />
     );
   }
 }
 
-PlaningView.propTypes = {
+ResearchView.propTypes = {
   history: PropTypes.object.isRequired,
 };
 
-export default PlaningView;
+export default ResearchView;

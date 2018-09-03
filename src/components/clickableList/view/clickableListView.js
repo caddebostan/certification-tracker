@@ -3,15 +3,15 @@ import { Grid } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
 // Components
-import { RegularCard, ItemGrid, Table } from '../../../components';
+import { RegularCard, ItemGrid, Table } from '../../';
 
 /*
 *            Props Name        Description                                     Value
-*@props -->  props name here   description here                                Value Type Here
+* @props -->  props name here   description here                                Value Type Here
 *
 */
 
-class PlaningListView extends Component {
+class ClickableList extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -30,13 +30,15 @@ class PlaningListView extends Component {
   };
 
   render() {
+    const { title, subTitle } = this.props;
+
     return (
       <Grid container>
         <ItemGrid xs={12} sm={12} md={12}>
           <RegularCard
             plainCard={false}
-            cardTitle="Planlama"
-            cardSubtitle="Planlanacak basvuruyu seciniz."
+            cardTitle={title}
+            cardSubtitle={subTitle}
             content={this._getContent()}
           />
         </ItemGrid>
@@ -45,17 +47,21 @@ class PlaningListView extends Component {
   }
 }
 
-PlaningListView.propTypes = {
+ClickableList.propTypes = {
   tableData: PropTypes.array,
   tableHead: PropTypes.array,
   tableHeaderColor: PropTypes.string,
   handleOnRowClick: PropTypes.func.isRequired,
+  title: PropTypes.string,
+  subTitle: PropTypes.string,
 };
 
-PlaningListView.defaultProps = {
+ClickableList.defaultProps = {
   tableData: [],
   tableHead: [],
   tableHeaderColor: 'red',
+  subTitle: 'List Sub Title',
+  title: 'List Title',
 };
 
-export default PlaningListView;
+export default ClickableList;
