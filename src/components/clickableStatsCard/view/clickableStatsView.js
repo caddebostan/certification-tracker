@@ -1,9 +1,9 @@
 import React from 'react';
-import { withStyles, Button } from '@material-ui/core';
+import { withStyles, Card, CardContent, CardActions, Typography } from '@material-ui/core';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-import { StatsCard } from '../../../components';
-
-import dashboardStyle from '../../../assets/jss/material-dashboard-react/dashboardStyle';
+import statsCardStyle from '../../../assets/jss/material-dashboard-react/statsCardStyle';
 
 class ClickableStatsView extends React.Component {
   constructor(props) {
@@ -11,43 +11,57 @@ class ClickableStatsView extends React.Component {
     this.state = {};
   }
 
-  _handleOnStateClick = () => {
-    alert('brave tikladin lan!');
-    const { handleOnClick } = this.props;
-
-    if (handleOnClick) {
-      handleOnClick();
-    }
-  };
-
   render() {
-    const {
-      icon,
-      title,
-      iconColor,
-      description,
-      small,
-      statIcon,
-      statIconColor,
-      statLink,
-    } = this.props;
+    const { classes, title, description, statLink, small, statText } = this.props;
 
     return (
       <div>
-        <Button onClick={() => this._handleOnStateClick()}>
-          <StatsCard
-            iconColor={iconColor}
-            title={title}
-            description={description}
-            small={small}
-            statIcon={statIcon}
-            statIconColor={statIconColor}
-            statLink={statLink}
-          />
-        </Button>
+        <Link to="dashboard">
+          <Card className={classes.card}>
+            <CardContent className={classes.cardContent}>
+              <Typography component="p" className={classes.cardCategory}>
+                {title}
+              </Typography>
+              <Typography variant="headline" component="h2" className={classes.cardTitle}>
+                {description}{' '}
+                {small !== undefined ? (
+                  <small className={classes.cardTitleSmall}>{small}</small>
+                ) : null}
+              </Typography>
+            </CardContent>
+            <CardActions className={classes.cardActions}>
+              <div className={classes.cardStats}>
+                {statLink !== undefined ? (
+                  <a href={statLink.href} className={classes.cardStatsLink}>
+                    {statLink.text}
+                  </a>
+                ) : statText !== undefined ? (
+                  statText
+                ) : null}
+              </div>
+            </CardActions>
+          </Card>
+        </Link>
       </div>
     );
   }
 }
 
-export default withStyles(dashboardStyle)(ClickableStatsView);
+ClickableStatsView.propTypes = {
+  classes: PropTypes.object.isRequired,
+  title: PropTypes.node,
+  description: PropTypes.node,
+  small: PropTypes.node,
+
+  statLink: PropTypes.object,
+  statText: PropTypes.node,
+};
+
+ClickableStatsView.defaultProps = {
+  title: '',
+  description: '',
+  small: '',
+  statLink: {},
+  statText: '',
+};
+export default withStyles(statsCardStyle)(ClickableStatsView);

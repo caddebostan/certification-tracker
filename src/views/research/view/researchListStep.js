@@ -11,7 +11,7 @@ import {
 } from '@material-ui/icons';
 import { withStyles, Grid } from '@material-ui/core';
 
-import { StatsCard, ItemGrid, ClickableStats } from '../../../components';
+import { ItemGrid, ClickableStats } from '../../../components';
 
 import dashboardStyle from '../../../assets/jss/material-dashboard-react/dashboardStyle';
 
@@ -29,7 +29,7 @@ class ResearchListStep extends React.Component {
             <ClickableStats
               icon={ContentCopy}
               iconColor="orange"
-              title="Title"
+              title="Bilmem ne belgesi"
               description="49"
               small="sub title"
               statIcon={Warning}
@@ -50,22 +50,46 @@ class ResearchListStep extends React.Component {
           </ItemGrid>
           <ItemGrid xs={12} sm={6} md={3}>
             <ClickableStats
-              icon={InfoOutline}
-              iconColor="red"
+              icon={Store}
+              iconColor="green"
               title="title"
-              description="75"
-              statIcon={LocalOffer}
-              statText="stat text"
+              description="description"
+              small="sub title"
+              statIcon={DateRange}
+              statText="Last 24 Hours"
             />
           </ItemGrid>
           <ItemGrid xs={12} sm={6} md={3}>
             <ClickableStats
-              icon={Accessibility}
-              iconColor="blue"
+              icon={Store}
+              iconColor="green"
               title="title"
-              description="+78"
-              statIcon={Update}
-              statText="stat text"
+              description="description"
+              small="sub title"
+              statIcon={DateRange}
+              statText="Last 24 Hours"
+            />
+          </ItemGrid>
+          <ItemGrid xs={12} sm={6} md={3}>
+            <ClickableStats
+              icon={Store}
+              iconColor="green"
+              title="title"
+              description="description"
+              small="sub title"
+              statIcon={DateRange}
+              statText="Last 24 Hours"
+            />
+          </ItemGrid>
+          <ItemGrid xs={12} sm={6} md={3}>
+            <ClickableStats
+              icon={Store}
+              iconColor="green"
+              title="title"
+              description="description"
+              small="sub title"
+              statIcon={DateRange}
+              statText="Last 24 Hours"
             />
           </ItemGrid>
         </Grid>

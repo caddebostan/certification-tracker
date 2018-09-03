@@ -40,8 +40,6 @@ class PlaningView extends Component {
   _handleOnRowClick = id => {
     console.log(id);
     this.props.history.push('/planlama/form');
-    const uu = id;
-    const ss = uu;
   };
 
   render() {
