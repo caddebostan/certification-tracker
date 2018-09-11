@@ -5,11 +5,11 @@ import { ResearchListStep } from '../views/research';
 
 const hiddenRoutes = [
   {
-    path: '/basvurular/form',
+    path: '/admin/basvurular/form',
     component: AddmisionsForm,
   },
   {
-    path: '/planlama/form',
+    path: '/admin/planlama/form',
     component: PlaningForm,
   },
   {
@@ -17,7 +17,7 @@ const hiddenRoutes = [
     component: Login,
   },
   {
-    path: '/research/select',
+    path: '/admin/tetkikler/select',
     component: ResearchListStep,
   },
 ];

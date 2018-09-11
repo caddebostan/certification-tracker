@@ -50,7 +50,7 @@ const dashboardRoutes = [
     component: Research,
   },
   {
-    path: '/texts',
+    path: 'admin/texts',
     sidebarName: 'Texts',
     navbarName: 'Texts',
     icon: LibraryBooks,
@@ -92,7 +92,7 @@ const dashboardRoutes = [
     icon: PersonAdd,
     component: UserCreate,
   },
-  { redirect: true, path: '/', to: '/dashboard', navbarName: 'Redirect' },
+  { redirect: true, path: '/', to: 'admin/dashboard', navbarName: 'Redirect' },
 ];
 
 export default dashboardRoutes;

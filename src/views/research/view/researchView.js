@@ -38,7 +38,7 @@ class ResearchView extends Component {
   // Component Functions
 
   _handleOnRowClick = id => {
-    this.props.history.push('/research/select');
+    this.props.history.push('/admin/tetkikler/select');
   };
 
   render() {
