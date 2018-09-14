@@ -15,7 +15,7 @@ const _handleOnRowClick = (id, props) => {
 };
 
 const CustomTable = ({ ...props }) => {
-  const { classes, tableHead, tableData, tableHeaderColor } = props;
+  const { classes, tableHead, tableData, tableHeaderColor, quickButtons } = props;
   return (
     <div className={classes.tableResponsive}>
       <Table className={classes.table}>
@@ -42,6 +42,7 @@ const CustomTable = ({ ...props }) => {
                   {item}
                 </TableCell>
               ))}
+              {quickButtons && <TableCell className={classes.tableCell}>{quickButtons}</TableCell>}
             </TableRow>
           ))}
         </TableBody>

@@ -18,9 +18,10 @@ class ClickableList extends Component {
   }
 
   _getContent = () => {
-    const { tableData, tableHead, tableHeaderColor, handleOnRowClick } = this.props;
+    const { tableData, tableHead, tableHeaderColor, handleOnRowClick, quickButtons } = this.props;
     return (
       <Table
+        quickButtons={quickButtons}
         handleOnRowClick={e => handleOnRowClick(e)}
         tableHeaderColor={tableHeaderColor}
         tableHead={tableHead}

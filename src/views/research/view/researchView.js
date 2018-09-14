@@ -38,7 +38,12 @@ class ResearchView extends Component {
   // Component Functions
 
   _handleOnRowClick = id => {
-    this.props.history.push('/admin/tetkikler/select');
+    this.props.history.push({
+      pathname: '/admin/tetkikler/select:id',
+      search: '/12',
+      match: '12',
+    });
+    // Math.floor(Math.random() * 100)
   };
 
   render() {

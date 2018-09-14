@@ -8,6 +8,7 @@ import {
   Assignment,
   Description,
   PersonAdd,
+  AssignmentInd,
 } from '@material-ui/icons';
 
 import DashboardPage from '../views/dashboard/dashboard';
@@ -19,6 +20,7 @@ import Maps from '../views/maps/maps';
 import Document from '../views/document/view/documentView';
 import UserCreate from '../views/userCreate';
 import Research from '../views/research';
+import UserManegment from '../views/userManegment';
 
 const dashboardRoutes = [
   {
@@ -84,13 +86,19 @@ const dashboardRoutes = [
     icon: InsertDriveFile,
     component: Document,
   },
-  { redirect: true, path: '/admin', to: '/admin/dashboard', navbarName: 'Redirect' },
   {
-    path: '/kullanici-yarat',
+    path: '/admin/kullanici-yarat',
     sidebarName: 'Kullanici Yarat',
     navbarName: 'Kullanici Yarat',
     icon: PersonAdd,
     component: UserCreate,
+  },
+  {
+    path: '/admin/kullanici-yonet',
+    sidebarName: 'Kullanici Yonet',
+    navbarName: 'Kullanici Yonet',
+    icon: AssignmentInd,
+    component: UserManegment,
   },
   { redirect: true, path: '/', to: 'admin/dashboard', navbarName: 'Redirect' },
 ];

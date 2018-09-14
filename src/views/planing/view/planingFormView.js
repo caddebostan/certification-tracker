@@ -37,7 +37,7 @@ class PlaningFormView extends Component {
 
   _handleBackButton = () => {
     /* eslint-disable-next-line */
-    this.props.history.push('/planlama');
+    this.props.history.push('/admin/planlama');
   };
 
   render() {

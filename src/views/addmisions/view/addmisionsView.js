@@ -37,7 +37,7 @@ class AddmisionsView extends Component {
   // Component Functions
 
   _handleOnRowClick = id => {
-    this.props.history.push('/basvurular/form');
+    this.props.history.push('/admin/basvurular/form');
   };
 
   render() {
