@@ -86,6 +86,7 @@ const dashboardRoutes = [
     icon: InsertDriveFile,
     component: Document,
   },
+  { redirect: true, path: '/admin', to: '/admin/dashboard', navbarName: 'Redirect' },
   {
     path: '/admin/kullanici-yarat',
     sidebarName: 'Kullanici Yarat',
