@@ -1,0 +1,12 @@
+export const FETCHING_LOGIN = 'FETCHING_LOGIN';
+export const FAILED_LOGIN = 'FAILED_LOGIN';
+export const SUCCESS_LOGIN = 'SUCCESS_LOGIN';
+export const SAVE_USER_DATA = 'SAVE_USER_DATA';
+
+export const API_STATUS = {
+  INIT: 'INIT',
+  SETUP: 'SETUP',
+  FETCHING: 'FETCHING',
+  FETCHED: 'FETCHED',
+  FAILED: 'FAILED',
+};

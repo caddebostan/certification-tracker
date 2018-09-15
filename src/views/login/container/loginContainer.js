@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
+import { login } from '../../../actions/authAction';
+
 // Components
 import LoginView from '../view/loginView';
 
@@ -14,9 +19,21 @@ class LoginContainer extends Component {
     this.state = {};
   }
 
+  _submitLoginForm = values => {
+    const { dispatch } = this.props;
+
+    dispatch(login({ email: values.kullaniciAdi, password: values.kullaniciPassword }));
+  };
+
   render() {
-    return <LoginView />;
+    return <LoginView submitLoginForm={this._submitLoginForm} />;
   }
 }
 
-export default LoginContainer;
+LoginContainer.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = () => ({});
+
+export default connect(mapStateToProps)(LoginContainer);

@@ -1,38 +1,58 @@
 import React, { Component } from 'react';
 import { Grid } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { submit, isPristine, isSubmitting, isValid } from 'redux-form';
+
 import { RegularCard, ItemGrid, LoginForm, Button } from '../../../components';
 
-export default class Login extends Component {
+class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
-  _getContent = () => <LoginForm />;
+  _getContent = () => {
+    const { submitLoginForm } = this.props;
 
-  _getFooter = () => (
-    <div>
-      <Link to="dashboard">
-        <Button color="success">Giris</Button>
-      </Link>
-    </div>
-  );
+    return <LoginForm onSubmit={submitLoginForm} />;
+  };
+
+  _getFooter = () => {
+    const { dispatch, formValid } = this.props;
+    return (
+      <Button color="success" disabled={!formValid} onClick={() => dispatch(submit('LoginForm'))}>
+        Giris
+      </Button>
+    );
+  };
 
   render() {
     return (
-      <div>
-        <Grid justify="center" container>
-          <ItemGrid xs={12} sm={12} md={6}>
-            <RegularCard
-              plainCard={false}
-              cardTitle="Giris"
-              content={this._getContent()}
-              footer={this._getFooter()}
-            />
-          </ItemGrid>
-        </Grid>
-      </div>
+      <Grid justify="center" container>
+        <ItemGrid xs={12} sm={12} md={6}>
+          <RegularCard
+            plainCard={false}
+            cardTitle="Giris"
+            content={this._getContent()}
+            footer={this._getFooter()}
+          />
+        </ItemGrid>
+      </Grid>
     );
   }
 }
+
+Login.propTypes = {
+  dispatch: PropTypes.func.isRequired,
+  formValid: PropTypes.func.isRequired,
+  submitLoginForm: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = state => ({
+  pristine: isPristine('LoginForm')(state),
+  submitting: isSubmitting('LoginForm')(state),
+  isValid: isValid('LoginForm')(state),
+});
+
+export default connect(mapStateToProps)(Login);

@@ -8,9 +8,9 @@ import { required } from '../../utilities/validation';
 import { ReduxFormInput, ItemGrid } from '../../components';
 
 // eslint-disable-next-line
-function LoginForm({ ...props }) {
+function LoginForm({ handleSubmit, onSubmit, ...props }) {
   return (
-    <div>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <Grid container>
         <ItemGrid xs={12} sm={12} md={12}>
           <ReduxFormInput name="kullaniciAdi" labelText="Kullanici Adi" validate={required} />
@@ -24,7 +24,7 @@ function LoginForm({ ...props }) {
           />
         </ItemGrid>
       </Grid>
-    </div>
+    </form>
   );
 }
 

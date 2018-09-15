@@ -37,7 +37,7 @@ class ResearchView extends Component {
 
   // Component Functions
 
-  _handleOnRowClick = id => {
+  _handleOnRowClick = () => {
     this.props.history.push({
       pathname: '/admin/tetkikler/select:id',
       search: '/12',

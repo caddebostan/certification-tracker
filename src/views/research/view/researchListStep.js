@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  ContentCopy,
-  Store,
-  InfoOutline,
-  Warning,
-  DateRange,
-  LocalOffer,
-  Update,
-  Accessibility,
-} from '@material-ui/icons';
+import { ContentCopy, Store, Warning, DateRange } from '@material-ui/icons';
 import { withStyles, Grid } from '@material-ui/core';
 
 import { ItemGrid, ClickableStats } from '../../../components';

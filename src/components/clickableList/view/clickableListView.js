@@ -51,6 +51,7 @@ class ClickableList extends Component {
 ClickableList.propTypes = {
   tableData: PropTypes.array,
   tableHead: PropTypes.array,
+  quickButtons: PropTypes.array,
   tableHeaderColor: PropTypes.string,
   handleOnRowClick: PropTypes.func.isRequired,
   title: PropTypes.string,
@@ -60,6 +61,7 @@ ClickableList.propTypes = {
 ClickableList.defaultProps = {
   tableData: [],
   tableHead: [],
+  quickButtons: [],
   tableHeaderColor: 'red',
   subTitle: 'List Sub Title',
   title: 'List Title',
