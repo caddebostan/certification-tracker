@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, Fragment} from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -17,7 +17,7 @@ import { Person, Notifications, Dashboard } from '@material-ui/icons';
 
 import headerLinksStyle from '../../assets/jss/material-dashboard-react/headerLinksStyle';
 
-class HeaderLinks extends React.Component {
+class HeaderLinks extends Component {
   state = {
     open: false,
   };
@@ -32,7 +32,7 @@ class HeaderLinks extends React.Component {
     const { classes } = this.props;
     const { open } = this.state;
     return (
-      <div>
+      <Fragment>
         <IconButton color="inherit" aria-label="Dashboard" className={classes.buttonLink}>
           <Dashboard className={classes.links} />
           <Hidden mdUp>
@@ -142,7 +142,7 @@ class HeaderLinks extends React.Component {
             </ClickAwayListener>
           </Popper>
         </Manager>
-      </div>
+      </Fragment>
     );
   }
 }

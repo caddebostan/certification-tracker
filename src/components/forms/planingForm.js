@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
@@ -10,7 +10,7 @@ import { ReduxFormInput, ReduxFormSelect, ItemGrid } from '../../components';
 // eslint-disable-next-line
 function AddmisionsForm({ ...props }) {
   return (
-    <div>
+    <Fragment>
       <Grid container>
         <ItemGrid xs={12} sm={12} md={12}>
           <h5>
@@ -270,7 +270,7 @@ function AddmisionsForm({ ...props }) {
           />
         </ItemGrid>
       </Grid>
-    </div>
+    </Fragment>
   );
 }
 

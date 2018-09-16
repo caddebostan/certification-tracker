@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Field } from 'redux-form';
 import PropTypes from 'prop-types';
 
@@ -10,7 +10,7 @@ class Input extends Component {
       meta: { touched, error },
     } = field;
     return (
-      <div>
+      <Fragment>
         <CustomInput
           classes={field.classes}
           labelProps={field.labelProps}
@@ -28,7 +28,7 @@ class Input extends Component {
           }}
           inputProps={{ ...field.input, ...field.inputProps }}
         />
-      </div>
+      </Fragment>
     );
   };
 

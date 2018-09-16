@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import {
   ContentCopy,
   Store,
@@ -15,7 +15,7 @@ import { StatsCard, TasksCard, RegularCard, Table, ItemGrid } from '../../compon
 
 import dashboardStyle from '../../assets/jss/material-dashboard-react/dashboardStyle';
 
-class Dashboard extends React.Component {
+class Dashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -23,7 +23,7 @@ class Dashboard extends React.Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         <Grid container>
           <ItemGrid xs={12} sm={6} md={3}>
             <StatsCard
@@ -93,7 +93,7 @@ class Dashboard extends React.Component {
             />
           </ItemGrid>
         </Grid>
-      </div>
+      </Fragment>
     );
   }
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Grid } from '@material-ui/core';
 import { connect } from 'react-redux';
@@ -33,7 +33,7 @@ class AddmisionsFormView extends Component {
   _getFooter = () => {
     const { dispatch, pristine, submitting, handleBackButton } = this.props;
     return (
-      <div>
+      <Fragment>
         <Button color="danger" onClick={() => handleBackButton()}>
           Geri
         </Button>
@@ -44,7 +44,7 @@ class AddmisionsFormView extends Component {
         >
           Kaydet ve Onayla
         </Button>
-      </div>
+      </Fragment>
     );
   };
 

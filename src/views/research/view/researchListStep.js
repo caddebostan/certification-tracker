@@ -1,21 +1,12 @@
-import React from 'react';
-import {
-  ContentCopy,
-  Store,
-  InfoOutline,
-  Warning,
-  DateRange,
-  LocalOffer,
-  Update,
-  Accessibility,
-} from '@material-ui/icons';
+import React, { Component, Fragment } from 'react';
+import { ContentCopy, Store, Warning, DateRange } from '@material-ui/icons';
 import { withStyles, Grid } from '@material-ui/core';
 
 import { ItemGrid, ClickableStats } from '../../../components';
 
 import dashboardStyle from '../../../assets/jss/material-dashboard-react/dashboardStyle';
 
-class ResearchListStep extends React.Component {
+class ResearchListStep extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -23,7 +14,7 @@ class ResearchListStep extends React.Component {
 
   render() {
     return (
-      <div>
+      <Fragment>
         <Grid container>
           <ItemGrid xs={12} sm={6} md={3}>
             <ClickableStats
@@ -93,7 +84,7 @@ class ResearchListStep extends React.Component {
             />
           </ItemGrid>
         </Grid>
-      </div>
+      </Fragment>
     );
   }
 }

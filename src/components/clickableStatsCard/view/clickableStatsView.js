@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import { withStyles, Card, CardContent, CardActions, Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import statsCardStyle from '../../../assets/jss/material-dashboard-react/statsCardStyle';
 
-class ClickableStatsView extends React.Component {
+class ClickableStatsView extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -15,7 +15,7 @@ class ClickableStatsView extends React.Component {
     const { classes, title, description, statLink, small, statText } = this.props;
 
     return (
-      <div>
+      <Fragment>
         <Link to="dashboard">
           <Card className={classes.card}>
             <CardContent className={classes.cardContent}>
@@ -42,7 +42,7 @@ class ClickableStatsView extends React.Component {
             </CardActions>
           </Card>
         </Link>
-      </div>
+      </Fragment>
     );
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Grid } from '@material-ui/core';
 import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
@@ -10,7 +10,7 @@ import { ReduxFormInput, ItemGrid } from '../../components';
 // eslint-disable-next-line
 function UserCreateForm({ ...props }) {
   return (
-    <div>
+    <Fragment>
       <Grid container>
         <ItemGrid xs={12} sm={12} md={12}>
           <ReduxFormInput name="kullaniciAdi" labelText="Kullanici Adi" validate={required} />
@@ -28,7 +28,7 @@ function UserCreateForm({ ...props }) {
           <ReduxFormInput name="kullaniciPassword" labelText="Email" />
         </ItemGrid>
       </Grid>
-    </div>
+    </Fragment>
   );
 }
 

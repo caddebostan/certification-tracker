@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Grid } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { RegularCard, ItemGrid, UserCreateForm, Button } from '../../../components';
@@ -12,16 +12,16 @@ export default class UserCreateView extends Component {
   _getContent = () => <UserCreateForm />;
 
   _getFooter = () => (
-    <div>
+    <Fragment>
       <Link to="dashboard">
         <Button color="success">Giris</Button>
       </Link>
-    </div>
+    </Fragment>
   );
 
   render() {
     return (
-      <div>
+      <Fragment>
         <Grid container>
           <ItemGrid xs={12} sm={12} md={6}>
             <RegularCard
@@ -40,7 +40,7 @@ export default class UserCreateView extends Component {
             />
           </ItemGrid>
         </Grid>
-      </div>
+      </Fragment>
     );
   }
 }

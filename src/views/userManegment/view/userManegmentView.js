@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Grid, IconButton } from '@material-ui/core';
 import { Clear, Create, Reorder } from '@material-ui/icons';
 import { ClickableList } from '../../../components';
@@ -20,7 +20,7 @@ export default class UserManegmentView extends Component {
   render() {
     const { tableData, tableHead } = this.state;
     return (
-      <div>
+      <Fragment>
         <Grid container>
           <ClickableList
             tableData={tableData}
@@ -29,7 +29,7 @@ export default class UserManegmentView extends Component {
             subTitle="Planlanacak basvuruyu seciniz."
             tableHeaderColor
             quickButtons={
-              <div>
+              <Fragment>
                 <IconButton
                   color="primary"
                   aria-label="Notifications"
@@ -59,11 +59,11 @@ export default class UserManegmentView extends Component {
                 >
                   <Clear />
                 </IconButton>
-              </div>
+              </Fragment>
             }
           />
         </Grid>
-      </div>
+      </Fragment>
     );
   }
 }

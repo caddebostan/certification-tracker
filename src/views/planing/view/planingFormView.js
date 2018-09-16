@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Grid } from '@material-ui/core';
 
 // Constants
@@ -27,12 +27,12 @@ class PlaningFormView extends Component {
   };
 
   _getFooter = () => (
-    <div>
+    <Fragment>
       <Button color="danger" onClick={() => this._handleBackButton()}>
         Geri
       </Button>
       <Button color="rose">Kaydet ve Onayla</Button>
-    </div>
+    </Fragment>
   );
 
   _handleBackButton = () => {

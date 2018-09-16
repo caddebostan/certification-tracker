@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Switch, Route, Redirect } from 'react-router-dom';
 // creates a beautiful scrollbar
@@ -29,7 +29,7 @@ const switchRoutes = (
   </Switch>
 );
 
-class App extends React.Component {
+class App extends Component {
   state = {
     mobileOpen: false,
   };
@@ -52,14 +52,14 @@ class App extends React.Component {
   render() {
     const { classes, ...rest } = this.props;
     return this.props.location.pathname === '/login' ? (
-      <div>
+      <Fragment>
         {this.getRoute() && (
           <div className={classes.content}>
             <div className={classes.container}>{switchRoutes}</div>
           </div>
         )}
         <Footer />
-      </div>
+      </Fragment>
     ) : (
       <div className={classes.wrapper}>
         <Sidebar
